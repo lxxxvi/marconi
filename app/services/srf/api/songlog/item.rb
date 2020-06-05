@@ -1,7 +1,6 @@
-class Srf::Broadcast
-
-  def initialize(api_object)
-    @api_object ||= api_object
+class Srf::Api::Songlog::Item
+  def initialize(songlog_item)
+    @songlog_item ||= songlog_item
   end
 
   def broadcast_id
@@ -31,7 +30,7 @@ class Srf::Broadcast
   private
 
   def broadcast
-    @broadcast ||= @api_object
+    @broadcast ||= @songlog_item
   end
 
   def song

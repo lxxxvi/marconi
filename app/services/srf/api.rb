@@ -1,5 +1,3 @@
-require 'open-uri'
-
 class Srf::Api
   def initialize(date = Date.today.yesterday)
     @date = date
@@ -9,6 +7,6 @@ class Srf::Api
 
   def call
     request = Request.new(@from_time, @to_time)
-    @response = request.call
+    response = request.call
   end
 end

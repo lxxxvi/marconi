@@ -7,8 +7,8 @@ class Srf::Api::Response
   end
 
   def broadcasts
-    @broadcasts ||= @data['Songlog'].map do |object|
-      Srf::Broadcast.new(object)
+    @broadcasts ||= @data['Songlog'].map do |item|
+      Srf::Broadcast.new(item)
     end
   end
 end
