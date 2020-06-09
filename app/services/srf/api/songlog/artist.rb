@@ -1,4 +1,4 @@
-class Srf::Api::Artist
+class Srf::Api::Songlog::Artist
   attr_reader :id, :name
 
   def initialize(hash)

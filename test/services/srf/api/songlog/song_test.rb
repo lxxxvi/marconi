@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Srf::Api::Songlog::SongTest < ActiveSupport::TestCase
   test '.new' do
-    Srf::Api::Songlog::Song.new(example_srf_api_song_hash).tap do |srf_api_song|
+    Srf::Api::Songlog::Song.new(srf_api_songlog_song).tap do |srf_api_song|
       assert_equal 'STRAWBERRY MOON', srf_api_song.title
       assert_equal 'SONG-ID', srf_api_song.id
 
@@ -16,7 +16,7 @@ class Srf::Api::Songlog::SongTest < ActiveSupport::TestCase
 
   private
 
-  def example_srf_api_song_hash
+  def srf_api_songlog_song
     {
       "title" => "STRAWBERRY MOON",
       "Artist" => {

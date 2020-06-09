@@ -4,7 +4,7 @@ class Srf::Api::Songlog::Song
   def initialize(hash)
     @id = hash['id']
     @title = hash['title']
-    @artist = Srf::Api::Artist.new(hash['Artist'])
+    @artist = Srf::Api::Songlog::Artist.new(hash['Artist'])
   end
 
   def to_song
