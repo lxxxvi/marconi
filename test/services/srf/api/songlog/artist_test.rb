@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Srf::Api::Songlog::ArtistTest < ActiveSupport::TestCase
   test '.new' do
-    srf_api_songlog_artist.tap do |srf_api_artist|
-      assert_equal 'Thurston Moore', srf_api_artist.name
-      assert_equal 'ARTIST-ID', srf_api_artist.id
+    create_srf_api_songlog_artist.tap do |srf_api_songlog_artist|
+      assert_equal 'Thurston Moore', srf_api_songlog_artist.name
+      assert_equal 'ARTIST-ID', srf_api_songlog_artist.id
     end
   end
 
   test '#to_artist' do
-    srf_api_songlog_artist.to_artist.tap do |artist|
+    create_srf_api_songlog_artist.to_artist.tap do |artist|
       assert_equal Artist, artist.class
       assert_equal 'Thurston Moore', artist.name
       assert artist.new_record?
@@ -18,7 +18,7 @@ class Srf::Api::Songlog::ArtistTest < ActiveSupport::TestCase
 
   private
 
-  def srf_api_songlog_artist
+  def create_srf_api_songlog_artist
     Srf::Api::Songlog::Artist.new(
       {
         "name" => "Thurston Moore",

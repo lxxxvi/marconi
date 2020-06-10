@@ -2,16 +2,16 @@ require 'test_helper'
 
 class Srf::Api::Songlog::SongTest < ActiveSupport::TestCase
   test '.new' do
-    srf_api_songlog_song.tap do |srf_api_song|
-      assert_equal 'STRAWBERRY MOON', srf_api_song.title
-      assert_equal 'SONG-ID', srf_api_song.id
+    create_srf_api_songlog_song.tap do |srf_api_songlog_song|
+      assert_equal 'STRAWBERRY MOON', srf_api_songlog_song.title
+      assert_equal 'SONG-ID', srf_api_songlog_song.id
 
-      assert_equal 'Thurston Moore', srf_api_song.artist.name
+      assert_equal 'Thurston Moore', srf_api_songlog_song.artist.name
     end
   end
 
   test '#to_song' do
-    srf_api_songlog_song.to_song.tap do |song|
+    create_srf_api_songlog_song.to_song.tap do |song|
       assert_equal Song, song.class
       assert_equal 'STRAWBERRY MOON', song.title
       assert song.new_record?
@@ -19,7 +19,7 @@ class Srf::Api::Songlog::SongTest < ActiveSupport::TestCase
   end
 
   test '#artist' do
-    srf_api_songlog_song.artist.tap do |artist|
+    create_srf_api_songlog_song.artist.tap do |artist|
       assert_equal Artist, artist.class
       assert_equal 'Thurston Moore', artist.name
       assert artist.new_record?
@@ -28,7 +28,7 @@ class Srf::Api::Songlog::SongTest < ActiveSupport::TestCase
 
   private
 
-  def srf_api_songlog_song
+  def create_srf_api_songlog_song
     Srf::Api::Songlog::Song.new(
       {
         "title" => "STRAWBERRY MOON",

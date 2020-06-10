@@ -1,10 +1,18 @@
 class Srf::Api::Songlog::Song
-  attr_reader :id, :title, :srf_api_songlog_artist
+  def initialize(data)
+    @data = data
+  end
 
-  def initialize(hash)
-    @id = hash['id']
-    @title = hash['title']
-    @srf_api_songlog_artist = Srf::Api::Songlog::Artist.new(hash['Artist'])
+  def id
+    @data['id']
+  end
+
+  def title
+    @data['title']
+  end
+
+  def srf_api_songlog_artist
+    @srf_api_songlog_artist ||= Srf::Api::Songlog::Artist.new(@data['Artist'])
   end
 
   def to_song
@@ -12,6 +20,6 @@ class Srf::Api::Songlog::Song
   end
 
   def artist
-    @artist ||= @srf_api_songlog_artist.to_artist
+    @artist ||= srf_api_songlog_artist.to_artist
   end
 end

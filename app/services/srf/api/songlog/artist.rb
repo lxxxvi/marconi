@@ -1,9 +1,14 @@
 class Srf::Api::Songlog::Artist
-  attr_reader :id, :name
+  def initialize(data)
+    @data = data
+  end
 
-  def initialize(hash)
-    @id = hash['id']
-    @name = hash['name']
+  def id
+    @id = @data['id']
+  end
+
+  def name
+    @name = @data['name']
   end
 
   def to_artist
