@@ -10,5 +10,5 @@ yesterday_song_srf3:
 
 yesterday_20200605_broadcast_srf3:
   station: srf3
-  identifier: "yesterday_20200605_broadcast"
+  identifier: "YESTERDAY-20200605-BROADCAST"
   externally_identifyable: yesterday_20200605_broadcast (Broadcast)

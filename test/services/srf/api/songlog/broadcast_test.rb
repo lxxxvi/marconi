@@ -31,24 +31,7 @@ class Srf::Api::Songlog::BroadcastTest < ActiveSupport::TestCase
 
   def create_srf_api_songlog_broadcast
     Srf::Api::Songlog::Broadcast.new(
-      {
-        "id" => "BROADCAST-ID",
-        "channelId" => "CHANNEL-ID",
-        "playedDate" => "2020-06-04T23:54:14+02:00",
-        "isPlaying" => false,
-        "Song" => {
-            "title" => "STRAWBERRY MOON",
-            "Artist" => {
-              "name" => "Thurston Moore",
-              "id" => "ARTIST-ID",
-              "modifiedDate" => "2013-02-14T15:50:26+01:00",
-              "createdDate" => "2011-03-24T22:48:14+01:00"
-            },
-            "id" => "SONG-ID",
-            "modifiedDate" => "2020-06-04T23:54:14+02:00",
-            "createdDate" => "2020-06-04T23:54:14+02:00"
-        }
-      }
+      srf_api_response('srf/api_response_broadcast.json')
     )
   end
 end

@@ -20,12 +20,7 @@ class Srf::Api::Songlog::ArtistTest < ActiveSupport::TestCase
 
   def create_srf_api_songlog_artist
     Srf::Api::Songlog::Artist.new(
-      {
-        "name" => "Thurston Moore",
-        "id" => "ARTIST-ID",
-        "modifiedDate" => "2013-02-14T15:50:26+01:00",
-        "createdDate" => "2011-03-24T22:48:14+01:00"
-      }
+      srf_api_response('srf/api_response_broadcast.json')['Song']['Artist']
     )
   end
 end

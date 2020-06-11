@@ -27,25 +27,23 @@ class Song::Finders::SrfTest < ActiveSupport::TestCase
   private
 
   def srf_api_songlog_song_with_existing_external_key
-    create_srf_api_songlog_song('YESTERDAY', 'Yesterday')
+    new_srf_api_songlog_song('YESTERDAY', 'Yesterday', 'BEATLES')
   end
 
   def srf_api_songlog_song_without_existing_external_key
-    create_srf_api_songlog_song('HELP!', 'Help!', 'The Beatles', 'BEATLES')
+    new_srf_api_songlog_song('HELP!', 'Help!', 'BEATLES')
   end
 
   def srf_api_songlog_song_new_song
-    create_srf_api_songlog_song('OH!-DARLING', 'Oh! Darling', 'The Beatles', 'BEATLES')
+    new_srf_api_songlog_song('OH!-DARLING', 'Oh! Darling', 'BEATLES')
   end
 
-  def create_srf_api_songlog_song(id, title, artist_name = "Not relevant", artist_id = "NOT-RELEVANT")
-    Srf::Api::Songlog::Song.new({
-      "id" => id,
-      "title" => title,
-      "Artist" => {
-        "name" => artist_name,
-        "id" => artist_id
-      }
-    })
+  def new_srf_api_songlog_song(song_id, song_title, artist_id)
+    song_fixture = srf_api_response('srf/api_response_broadcast.json')['Song']
+    song_fixture['id'] = song_id
+    song_fixture['title'] = song_title
+    song_fixture['Artist']['id'] = artist_id
+
+    Srf::Api::Songlog::Song.new(song_fixture)
   end
 end

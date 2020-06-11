@@ -37,4 +37,12 @@ class Artist::Finders::SrfTest < ActiveSupport::TestCase
   def srf_api_songlog_artist_new_artist
     Srf::Api::Songlog::Artist.new({ 'name' => 'Run The Jewels', 'id' => 'RUN-THE-JEWELS' })
   end
+
+  def new_srf_api_songlog_artist(artist_id, artist_name)
+    artist_fixture = srf_api_response('srf/api_response_broadcast.json')['Song']['Artist']
+    artist_fixture['id'] = artist_id
+    artist_fixture['name'] = artist_name
+
+    Srf::Api::Songlog::Artist.new(artist_fixture)
+  end
 end

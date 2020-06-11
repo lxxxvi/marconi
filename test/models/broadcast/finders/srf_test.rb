@@ -20,34 +20,30 @@ class Broadcast::Finders::SrfTest < ActiveSupport::TestCase
   private
 
   def srf_api_songlog_broadcast_with_existing_external_key
-    Srf::Api::Songlog::Broadcast.new(
-      {
-        "id" => "YESTERDAY-20200605-BROADCAST",
-        "playedDate" => "2020-06-05T16:00:00+00:00",
-        "Song" => {
-          "id" => "YESTERDAY",
-          "Artist" => {
-            "name" => "The Beatles",
-            "id" => "BEATLES"
-          }
-        }
-      }
+    new_srf_api_songlog_broadcast(
+      "YESTERDAY-20200605-BROADCAST",
+      "2020-06-05T16:00:00+00:00",
+      "YESTERDAY",
+      "BEATLES"
     )
   end
 
   def srf_api_songlog_broadcast_new_broadcast
-    Srf::Api::Songlog::Broadcast.new(
-      {
-        "id" => "YESTERDAY-20200606-BROADCAST",
-        "playedDate" => "2020-06-06T08:00:00+00:00",
-        "Song" => {
-          "id" => "YESTERDAY",
-          "Artist" => {
-            "id" => "BEATLES"
-          }
-        }
-      }
+    new_srf_api_songlog_broadcast(
+      "YESTERDAY-20200606-BROADCAST",
+      "2020-06-06T08:00:00+00:00",
+      "YESTERDAY",
+      "BEATLES"
     )
   end
 
+  def new_srf_api_songlog_broadcast(broadcast_id, broadcasted_at, song_id, artist_id)
+    broadcast_fixture = srf_api_response('srf/api_response_broadcast.json')
+    broadcast_fixture['id'] = broadcast_id
+    broadcast_fixture['playedDate'] = broadcasted_at
+    broadcast_fixture['Song']['id'] = song_id
+    broadcast_fixture['Song']['Artist']['id'] = artist_id
+
+    Srf::Api::Songlog::Broadcast.new(broadcast_fixture)
+  end
 end
