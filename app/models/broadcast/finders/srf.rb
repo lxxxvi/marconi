@@ -29,7 +29,10 @@ class Broadcast::Finders::Srf
                 .broadcasted_at_around(@srf_api_songlog_broadcast.broadcasted_at)
                 .first_or_initialize.tap do |broadcast|
       broadcast.broadcasted_at = @srf_api_songlog_broadcast.broadcasted_at
-      broadcast.external_keys.new(identifier: @srf_api_songlog_broadcast.id)
+      broadcast.external_keys.new(
+        station: srf3_station,
+        identifier: @srf_api_songlog_broadcast.id
+      )
     end
   end
 end

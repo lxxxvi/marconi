@@ -14,6 +14,7 @@ class Broadcast::Finders::SrfTest < ActiveSupport::TestCase
       assert_equal songs(:beatles_yesterday), broadcast.song
       assert broadcast.external_keys.size.positive?
       assert_equal 'YESTERDAY-20200606-BROADCAST', broadcast.external_keys.first.identifier
+      assert_equal stations(:srf3), broadcast.external_keys.first.station
     end
   end
 

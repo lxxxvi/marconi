@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Srf::Api::Request
   BASE_URL = "https://www.srf.ch/songlog/log/channel".freeze
   SRF3_CHANNEL_UUID = "dd0fa1ba-4ff6-4e1a-ab74-d7e49057d96f".freeze

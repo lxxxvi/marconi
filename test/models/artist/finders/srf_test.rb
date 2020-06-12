@@ -21,6 +21,7 @@ class Artist::Finders::SrfTest < ActiveSupport::TestCase
       assert 'Run The Jewels', artist.name
       assert artist.external_keys.size.positive?
       assert_equal 'RUN-THE-JEWELS', artist.external_keys.first.identifier
+      assert_equal stations(:srf3), artist.external_keys.first.station
     end
   end
 

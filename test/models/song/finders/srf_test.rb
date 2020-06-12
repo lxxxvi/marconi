@@ -21,6 +21,7 @@ class Song::Finders::SrfTest < ActiveSupport::TestCase
       assert 'Oh! Darling', song.title
       assert song.external_keys.size.positive?
       assert_equal 'OH!-DARLING', song.external_keys.first.identifier
+      assert_equal stations(:srf3), song.external_keys.first.station
     end
   end
 

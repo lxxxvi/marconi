@@ -27,6 +27,14 @@ class Srf::Api::Songlog::BroadcastTest < ActiveSupport::TestCase
     end
   end
 
+  test '#save!' do
+    create_srf_api_songlog_broadcast.tap do |srf_api_songlog_broadcast|
+      assert_difference [-> { Broadcast.count }, -> { Song.count }, -> { Artist.count }], 1 do
+        srf_api_songlog_broadcast.save!
+      end
+    end
+  end
+
   private
 
   def create_srf_api_songlog_broadcast

@@ -1,7 +1,6 @@
 class Srf::Api
   def initialize(date = Date.today.yesterday)
-    @date = date
-    @from_time = date.at_beginnig_of_day
+    @from_time = date.at_beginning_of_day
     @to_time = date.at_end_of_day
   end
 

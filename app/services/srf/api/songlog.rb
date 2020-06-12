@@ -3,13 +3,13 @@ class Srf::Api::Songlog
     @songlog = songlog
   end
 
-  def items
-    @items ||= @songlog.map(&method(:to_songlog_item))
+  def broadcasts
+    @broadcasts ||= @songlog.map(&method(:to_songlog_broadcast))
   end
 
   private
 
-  def to_songlog_item(item)
-    Songlog::Item.new(item)
+  def to_songlog_broadcast(broadcast)
+    Srf::Api::Songlog::Broadcast.new(broadcast)
   end
 end

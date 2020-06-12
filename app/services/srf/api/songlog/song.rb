@@ -16,7 +16,9 @@ class Srf::Api::Songlog::Song
   end
 
   def to_song
-    @to_song ||= Song::Finders::Srf.find_or_initialize_by(self)
+    @to_song ||= Song::Finders::Srf.find_or_initialize_by(self).tap do |song|
+      song.artist = artist
+    end
   end
 
   def artist

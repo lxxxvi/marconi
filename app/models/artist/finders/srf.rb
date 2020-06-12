@@ -25,7 +25,10 @@ class Artist::Finders::Srf
 
   def artist_with_new_external_key
     Artist.find_or_initialize_by(name: @srf_api_songlog_artist.name).tap do |artist|
-      artist.external_keys.new(station: @srf3_station, identifier: @srf_api_songlog_artist.id)
+      artist.external_keys.new(
+        station: @srf3_station,
+        identifier: @srf_api_songlog_artist.id
+      )
     end
   end
 end

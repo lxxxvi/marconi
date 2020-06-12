@@ -6,9 +6,7 @@ class Srf::Api::Response
     @data = JSON.parse(raw_data)
   end
 
-  def broadcasts
-    @broadcasts ||= @data['Songlog'].map do |item|
-      Srf::Broadcast.new(item)
-    end
+  def songlog
+    @songlog ||= Srf::Api::Songlog.new(@data['Songlog'])
   end
 end

@@ -16,7 +16,13 @@ class Srf::Api::Songlog::Broadcast
   end
 
   def to_broadcast
-    @to_broadcast ||= Broadcast::Finders::Srf.find_or_initialize_by(self)
+    @to_broadcast ||= Broadcast::Finders::Srf.find_or_initialize_by(self).tap do |broadcast|
+      broadcast.song = song
+    end
+  end
+
+  def save!
+    to_broadcast.save!
   end
 
   def song
