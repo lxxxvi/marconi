@@ -1,0 +1,33 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=92952902aefa5f8a9939254b183e8c5821f1a0278579f810c40eb0712de97d98
+language: ruby
+cache:
+  bundler: true
+  yarn: true
+  npm: true
+rvm:
+  - 2.6.5
+services:
+  - postgresql
+addons:
+  chrome: stable
+before_install:
+  - "gem install bundler"
+  - "nvm install 12"
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - sudo chown root /opt/google/chrome/chrome-sandbox
+  - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
+  - "nvm use 12"
+  - "bin/yarn"
+script:
+  - "bin/test"
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+

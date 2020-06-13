@@ -5,14 +5,13 @@ class Srf::Synchronizer
   end
 
   def synchronize!
-    puts @srf_api.request.url
-    puts
+    Rails.logger.info "#{@srf_api.request.url}\n"
 
     srf_api_broadcasts.each do |srf_api_broadcast|
       srf_api_broadcast.save!
-      puts summary(srf_api_broadcast)
+      Rails.logger.info summary(srf_api_broadcast)
     rescue StandardError => e
-      puts summary(srf_api_broadcast, e)
+      Rails.logger.error summary(srf_api_broadcast, e)
     end
   end
 
