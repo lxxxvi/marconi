@@ -1,4 +1,6 @@
 language: ruby
+addons:
+  postgresql: "12.3"
 cache:
   bundler: true
 rvm:
