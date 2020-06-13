@@ -6,9 +6,9 @@ class CreateExternalKeys < ActiveRecord::Migration[6.0]
       t.bigint :externally_identifyable_id
       t.string :externally_identifyable_type
 
-      t.index [:station_id, :externally_identifyable_type, :identifier],
-        unique: true,
-        name: :indx_station_type_identifier
+      t.index %i[station_id externally_identifyable_type identifier],
+              unique: true,
+              name: :indx_station_type_identifier
 
       t.timestamps
     end

@@ -5,7 +5,7 @@ class CreateBroadcasts < ActiveRecord::Migration[6.0]
       t.references :station, null: false, foreign_key: true
       t.datetime :broadcasted_at, null: false
 
-      t.index [:station_id, :song_id, :broadcasted_at], unique: true
+      t.index %i[station_id song_id broadcasted_at], unique: true
 
       t.timestamps
     end

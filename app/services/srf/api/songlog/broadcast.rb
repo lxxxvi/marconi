@@ -21,11 +21,9 @@ class Srf::Api::Songlog::Broadcast
     end
   end
 
-  def save!
-    to_broadcast.save!
-  end
-
   def song
     @song ||= srf_api_songlog_song.to_song
   end
+
+  delegate :save!, to: :to_broadcast
 end

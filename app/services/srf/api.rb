@@ -6,6 +6,6 @@ class Srf::Api
   end
 
   def call
-    response = request.call
+    @request.call
   end
 end

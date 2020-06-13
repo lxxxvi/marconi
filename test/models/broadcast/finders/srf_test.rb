@@ -22,19 +22,19 @@ class Broadcast::Finders::SrfTest < ActiveSupport::TestCase
 
   def srf_api_songlog_broadcast_with_existing_external_key
     new_srf_api_songlog_broadcast(
-      "YESTERDAY-20200605-BROADCAST",
-      "2020-06-05T16:00:00+00:00",
-      "YESTERDAY",
-      "BEATLES"
+      'YESTERDAY-20200605-BROADCAST',
+      '2020-06-05T16:00:00+00:00',
+      'YESTERDAY',
+      'BEATLES'
     )
   end
 
   def srf_api_songlog_broadcast_new_broadcast
     new_srf_api_songlog_broadcast(
-      "YESTERDAY-20200606-BROADCAST",
-      "2020-06-06T08:00:00+00:00",
-      "YESTERDAY",
-      "BEATLES"
+      'YESTERDAY-20200606-BROADCAST',
+      '2020-06-06T08:00:00+00:00',
+      'YESTERDAY',
+      'BEATLES'
     )
   end
 

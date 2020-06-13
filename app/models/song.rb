@@ -4,5 +4,5 @@ class Song < ApplicationRecord
 
   belongs_to :artist
   has_many :broadcasts, dependent: :destroy
-  has_many :external_keys, as: :externally_identifyable
+  has_many :external_keys, as: :externally_identifyable, dependent: :destroy
 end

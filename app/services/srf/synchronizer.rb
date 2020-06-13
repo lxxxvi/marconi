@@ -1,5 +1,5 @@
 class Srf::Synchronizer
-  def initialize(date = Date.today.yesterday)
+  def initialize(date = Time.zone.today.yesterday)
     @srf_api = Srf::Api.new(date)
     @errors = []
   end
