@@ -32,10 +32,4 @@ class ExternalKeyTest < ActiveSupport::TestCase
       external_keys(:yesterday_song_srf3).destroy
     end
   end
-
-  test '.broadcasts' do
-    assert_difference -> { ExternalKey.broadcasts.count }, -1 do
-      external_keys(:yesterday_20200605_broadcast_srf3).destroy
-    end
-  end
 end

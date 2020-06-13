@@ -12,9 +12,8 @@ class Broadcast::Finders::SrfTest < ActiveSupport::TestCase
     Broadcast::Finders::Srf.find_or_initialize_by(srf_api_songlog_broadcast_new_broadcast).tap do |broadcast|
       assert broadcast.new_record?
       assert_equal songs(:beatles_yesterday), broadcast.song
-      assert broadcast.external_keys.size.positive?
-      assert_equal 'YESTERDAY-20200606-BROADCAST', broadcast.external_keys.first.identifier
-      assert_equal stations(:srf3), broadcast.external_keys.first.station
+      assert_equal 'YESTERDAY-20200606-BROADCAST', broadcast.external_key
+      assert_equal stations(:srf3), broadcast.station
     end
   end
 

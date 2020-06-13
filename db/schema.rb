@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_140917) do
+ActiveRecord::Schema.define(version: 2020_06_13_143613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 2020_06_05_140917) do
     t.datetime "broadcasted_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "external_key"
     t.index ["song_id"], name: "index_broadcasts_on_song_id"
+    t.index ["station_id", "external_key"], name: "index_broadcasts_on_station_id_and_external_key", unique: true
     t.index ["station_id", "song_id", "broadcasted_at"], name: "index_broadcasts_on_station_id_and_song_id_and_broadcasted_at", unique: true
     t.index ["station_id"], name: "index_broadcasts_on_station_id"
   end
