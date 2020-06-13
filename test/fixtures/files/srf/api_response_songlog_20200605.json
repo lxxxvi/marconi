@@ -1,0 +1,44 @@
+{
+  "pageNumber": 1,
+  "pageSize": 500,
+  "totalPages": 1,
+  "totalElements": 2,
+  "Songlog": [
+    {
+      "id": "YESTERDAY-20200605-BROADCAST",
+      "channelId": "CHANNEL-ID",
+      "playedDate": "2020-06-05T16:00:00+00:00",
+      "isPlaying": false,
+      "Song": {
+        "title": "Yesterday",
+        "Artist": {
+          "name": "The Beatles",
+          "id": "BEATLES",
+          "modifiedDate": "2012-12-05T00:00:00+01:00",
+          "createdDate": "2012-12-05T00:00:00+01:00"
+        },
+        "id": "YESTERDAY",
+        "modifiedDate": "2020-02-20T00:00:00+01:00",
+        "createdDate": "2020-02-20T00:00:00+01:00"
+      }
+    },
+    {
+      "id": "WHERE-IM-FROM-20200605-BROADCAST",
+      "channelId": "CHANNEL-ID",
+      "playedDate": "2020-06-05T16:05:00+00:00",
+      "isPlaying": false,
+      "Song": {
+        "title": "Where I'm From",
+        "Artist": {
+          "name": "Luuk / Nativ",
+          "id": "LUUK-NATIV",
+          "modifiedDate": "2020-04-27T00:00:00+02:00",
+          "createdDate": "2020-04-27T00:00:00+02:00"
+        },
+        "id": "WHERE-IM-FROM",
+        "modifiedDate": "2020-04-27T00:00:00+02:00",
+        "createdDate": "2020-04-27T00:00:00+02:00"
+      }
+    }
+  ]
+}

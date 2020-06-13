@@ -1,0 +1,14 @@
+beatles_artist_srf3:
+  station: srf3
+  identifier: "BEATLES"
+  externally_identifyable: beatles (Artist)
+
+yesterday_song_srf3:
+  station: srf3
+  identifier: "YESTERDAY"
+  externally_identifyable: beatles_yesterday (Song)
+
+yesterday_20200605_broadcast_srf3:
+  station: srf3
+  identifier: "YESTERDAY-20200605-BROADCAST"
+  externally_identifyable: yesterday_20200605_broadcast (Broadcast)
