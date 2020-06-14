@@ -17,7 +17,7 @@ class MigrateBroadcastExternalKeys < ActiveRecord::Migration[6.0]
   end
 
   def delete_external_keys
-    ExternalKey.broadcasts.destroy_all
+    execute(delete_external_keys_sql)
   end
 
   def copy_from_external_keys_to_broadcasts_sql
@@ -55,6 +55,14 @@ class MigrateBroadcastExternalKeys < ActiveRecord::Migration[6.0]
         ON CONFLICT (id)
         DO UPDATE
         SET external_key = EXCLUDED.external_key
+    SQL
+  end
+
+  def delete_external_keys_sql
+    <<~SQL
+      DELETE
+        FROM external_keys
+       WHERE externally_identifyable_type = 'Broadcast'
     SQL
   end
 end
