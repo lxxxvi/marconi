@@ -1,4 +1,4 @@
-module Facts::Songs::FirstBroadcasted
+module Facts::Songs::FirstBroadcast
   module_function
 
   def call!
