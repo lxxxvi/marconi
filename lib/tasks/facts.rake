@@ -9,6 +9,7 @@ namespace :facts do
     task all: :environment do
       Rake::Task['facts:songs:first_broadcast'].invoke
       Rake::Task['facts:songs:latest_broadcast'].invoke
+      Rake::Task['facts:songs:total_broadcasts'].invoke
     end
 
     desc 'Gathers first broadcasts for songs'
@@ -19,6 +20,11 @@ namespace :facts do
     desc 'Gathers latest broadcasts for songs'
     task latest_broadcast: :environment do
       Facts::Songs::LatestBroadcast.call!
+    end
+
+    desc 'Gathers total broadcasts for songs'
+    task total_broadcasts: :environment do
+      Facts::Songs::TotalBroadcasts.call!
     end
   end
 end
