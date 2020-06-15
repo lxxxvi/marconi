@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Facts::Songs::FirstBroadcastedTest < ActiveSupport::TestCase
+class Facts::Songs::FirstBroadcastTest < ActiveSupport::TestCase
   test '#call!' do
     song = songs(:beatles_yesterday)
 
@@ -8,7 +8,7 @@ class Facts::Songs::FirstBroadcastedTest < ActiveSupport::TestCase
 
     assert_changes -> { song.first_broadcasted_at },
                    to: Time.utc(2020, 6, 5, 16, 0, 0) do
-      Facts::Songs::FirstBroadcasted.call!
+      Facts::Songs::FirstBroadcast.call!
       song.reload
     end
   end
