@@ -5,4 +5,5 @@ class Broadcast < ApplicationRecord
   validates :broadcasted_at, presence: true
 
   scope :of_song, ->(song) { where(song: song) }
+  scope :ordered_chronologically, -> { order(broadcasted_at: :asc) }
 end
