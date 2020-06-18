@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_134536) do
+ActiveRecord::Schema.define(version: 2020_06_18_074601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,14 +46,24 @@ ActiveRecord::Schema.define(version: 2020_06_15_134536) do
     t.index ["station_id"], name: "index_external_keys_on_station_id"
   end
 
+  create_table "facts", force: :cascade do |t|
+    t.bigint "station_id"
+    t.string "factable_type", null: false
+    t.bigint "factable_id", null: false
+    t.string "key", null: false
+    t.string "value", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["factable_type", "factable_id"], name: "index_facts_on_factable_type_and_factable_id"
+    t.index ["station_id", "factable_type", "factable_id", "key"], name: "indx_station_factable_key", unique: true
+    t.index ["station_id"], name: "index_facts_on_station_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "title", null: false
     t.bigint "artist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "first_broadcasted_at"
-    t.datetime "latest_broadcasted_at"
-    t.bigint "total_broadcasts", default: 0, null: false
     t.index ["artist_id", "title"], name: "index_songs_on_artist_id_and_title", unique: true
     t.index ["artist_id"], name: "index_songs_on_artist_id"
   end
@@ -68,5 +78,6 @@ ActiveRecord::Schema.define(version: 2020_06_15_134536) do
   add_foreign_key "broadcasts", "songs"
   add_foreign_key "broadcasts", "stations"
   add_foreign_key "external_keys", "stations"
+  add_foreign_key "facts", "stations"
   add_foreign_key "songs", "artists"
 end
