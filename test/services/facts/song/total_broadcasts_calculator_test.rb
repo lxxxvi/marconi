@@ -7,7 +7,7 @@ class Facts::Song::TotalBroacastsCalculatorTest < ActiveSupport::TestCase
 
     assert_changes -> { total_broadcasts_for_song(song, station) }, from: 1, to: 3 do
       create_more_broadcasts!(song)
-      Facts::Song::TotalBroadcastsCalculator.call!
+      Facts::Song::TotalBroadcastsCalculator.new.call!
     end
   end
 

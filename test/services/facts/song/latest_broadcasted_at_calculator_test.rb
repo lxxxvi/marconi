@@ -11,7 +11,7 @@ class Facts::Song::LatestBroadcastedAtCalculatorTest < ActiveSupport::TestCase
 
     assert_changes -> { latest_broadcasted_at(song, station) },
                    to: Time.utc(2020, 6, 5, 16, 0, 0) do
-      Facts::Song::LatestBroadcastedAtCalculator.call!
+      Facts::Song::LatestBroadcastedAtCalculator.new.call!
       song.reload
     end
   end
