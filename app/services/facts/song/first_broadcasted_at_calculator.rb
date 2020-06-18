@@ -1,4 +1,4 @@
-module Facts::Songs::FirstBroadcastedAtCalculator
+module Facts::Song::FirstBroadcastedAtCalculator
   module_function
 
   def fact_key

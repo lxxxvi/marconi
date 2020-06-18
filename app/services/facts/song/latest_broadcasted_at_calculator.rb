@@ -1,4 +1,4 @@
-module Facts::Songs::LatestBroadcastedAtCalculator
+module Facts::Song::LatestBroadcastedAtCalculator
   module_function
 
   def fact_key

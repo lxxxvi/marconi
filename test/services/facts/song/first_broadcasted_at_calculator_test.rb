@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Facts::Songs::FirstBroadcastedAtCalculatorTest < ActiveSupport::TestCase
+class Facts::Song::FirstBroadcastedAtCalculatorTest < ActiveSupport::TestCase
   test '#call!' do
     song = songs(:beatles_yesterday)
     station = stations(:srf3)
@@ -11,7 +11,7 @@ class Facts::Songs::FirstBroadcastedAtCalculatorTest < ActiveSupport::TestCase
 
     assert_changes -> { first_broadcasted_at(song, station) },
                    to: Time.utc(2020, 6, 5, 16, 0, 0) do
-      Facts::Songs::FirstBroadcastedAtCalculator.call!
+      Facts::Song::FirstBroadcastedAtCalculator.call!
       song.reload
     end
   end

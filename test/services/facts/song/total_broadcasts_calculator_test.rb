@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class Facts::Songs::TotalBroacastsCalculatorTest < ActiveSupport::TestCase
+class Facts::Song::TotalBroacastsCalculatorTest < ActiveSupport::TestCase
   test '#call!' do
     song = songs(:beatles_yesterday)
     station = stations(:srf3)
 
     assert_changes -> { total_broadcasts_for_song(song, station) }, from: 1, to: 3 do
       create_more_broadcasts!(song)
-      Facts::Songs::TotalBroadcastsCalculator.call!
+      Facts::Song::TotalBroadcastsCalculator.call!
     end
   end
 
