@@ -33,6 +33,9 @@ class Srf::Api::Songlog::BroadcastTest < ActiveSupport::TestCase
         srf_api_songlog_broadcast.save!
       end
     end
+
+    latest_broadcast = Broadcast.find_by!(external_key: 'BROADCAST-ID')
+    assert_equal DateTime.new(2020, 6, 4, 23, 54, 14, '+02:00'), latest_broadcast.broadcasted_at
   end
 
   private
