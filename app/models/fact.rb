@@ -1,5 +1,5 @@
 class Fact < ApplicationRecord
-  belongs_to :station, optional: true
+  belongs_to :station
   belongs_to :factable, polymorphic: true
 
   validates :key, uniqueness: { scope: %i[station_id factable_id factable_type] }
