@@ -1,0 +1,17 @@
+beatles_yesterday_first_broadcasted_at_fact_srf3:
+  station: srf3
+  factable: beatles_yesterday (Song)
+  key: 'first_broadcasted_at'
+  value: '2020-06-05 16:00:00 +00:00'
+
+beatles_yesterday_latest_broadcasted_at_fact_srf3:
+  station: srf3
+  factable: beatles_yesterday (Song)
+  key: 'latest_broadcasted_at'
+  value: '2020-06-05 16:00:00 +00:00'
+
+beatles_yesterday_total_broadcasts_fact_srf3:
+  station: srf3
+  factable: beatles_yesterday (Song)
+  key: 'total_broadcasts'
+  value: '1'
