@@ -1,7 +1,7 @@
 class CreateFacts < ActiveRecord::Migration[6.0]
   def change
     create_table :facts do |t|
-      t.references :station, null: true, foreign_key: true
+      t.references :station, null: false, foreign_key: true, index: true
       t.references :factable, polymorphic: true, null: false
       t.string :key, null: false
       t.string :value, null: false

@@ -1,7 +1,7 @@
 class CreateExternalKeys < ActiveRecord::Migration[6.0]
   def change
     create_table :external_keys do |t|
-      t.references :station, null: false, foreign_key: true
+      t.references :station, null: false, foreign_key: true, index: true
       t.string :identifier
       t.bigint :externally_identifyable_id
       t.string :externally_identifyable_type
