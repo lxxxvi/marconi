@@ -1,20 +1,8 @@
 class Facts::CalculatorBase
-  class UnknownFactKey < StandardError
-    def initialize(fact_key)
-      super("Unknown fact_key #{fact_key.inspect}, see Fact.keys for valid keys")
-    end
-  end
-
-  class UnknownFactableType < StandardError
-    def initialize(factable_type)
-      super("Unknown factable_type #{factable_type.inspect}. Must be type of ActiveRecord::Base")
-    end
-  end
+  include Facts::CalculatorValidations
 
   def call!
-    validate_fact_key!
-    validate_factable_type!
-
+    validate_all!
     execute(upsert_statement_sql)
   end
 
@@ -60,7 +48,7 @@ class Facts::CalculatorBase
            , sd.updated_at
         FROM calculated_data cd
         CROSS JOIN static_data sd
-        ON CONFLICT (station_id, factable_type, factable_id, key)
+        ON CONFLICT (station_id, factable_type, factable_id, key, epoch_year, epoch_week)
         DO UPDATE SET value = EXCLUDED.value
                     , updated_at = EXCLUDED.updated_at
     SQL
@@ -91,17 +79,5 @@ class Facts::CalculatorBase
   # * value
   def calculated_data_sql
     raise 'implement in subclass'
-  end
-
-  def validate_fact_key!
-    return if Fact.keys.include?(fact_key.to_s)
-
-    raise UnknownFactKey, fact_key
-  end
-
-  def validate_factable_type!
-    return if factable_type.try(:new).is_a?(ActiveRecord::Base)
-
-    raise UnknownFactKey, factable_type
   end
 end
