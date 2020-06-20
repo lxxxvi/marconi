@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_070352) do
+ActiveRecord::Schema.define(version: 2020_06_19_151855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2020_06_18_070352) do
     t.string "value", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "epoch_year", default: 0, null: false
+    t.bigint "epoch_week", default: 0, null: false
     t.index ["factable_type", "factable_id"], name: "index_facts_on_factable_type_and_factable_id"
     t.index ["station_id", "factable_type", "factable_id", "key"], name: "indx_station_factable_key", unique: true
     t.index ["station_id"], name: "index_facts_on_station_id"
