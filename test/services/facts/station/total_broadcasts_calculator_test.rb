@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Facts::Station::TotalBroadcastsTest < ActiveSupport::TestCase
+class Facts::Station::TotalBroadcastsCalculatorTest < ActiveSupport::TestCase
   test '#call!' do
     station = stations(:srf3)
     number = 3
@@ -9,7 +9,7 @@ class Facts::Station::TotalBroadcastsTest < ActiveSupport::TestCase
 
     assert_difference -> { total_broadcasts_for_station(station) }, number do
       create_more_broadcasts!(station, number)
-      Facts::Station::TotalBroadcasts.new.call!
+      Facts::Station::TotalBroadcastsCalculator.new.call!
     end
   end
 
