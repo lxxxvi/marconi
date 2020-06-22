@@ -1,4 +1,4 @@
-class Facts::Station::TotalBroadcasts < Facts::CalculatorBase
+class Facts::Station::TotalBroadcastsCalculator < Facts::CalculatorBase
   def fact_key
     :total_broadcasts
   end
