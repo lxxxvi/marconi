@@ -15,3 +15,9 @@ beatles_yesterday_total_broadcasts_fact_srf3:
   factable: beatles_yesterday (Song)
   key: 'total_broadcasts'
   value: '1'
+
+srf3_total_broadcasts_fact:
+  station: srf3
+  factable: srf3 (Station)
+  key: 'total_broadcasts'
+  value: '1'
