@@ -69,6 +69,9 @@ Style/Lambda:
 Style/NumericLiterals:
   Enabled: false
 
+Style/RedundantFetchBlock:
+  Enabled: true
+
 Style/RedundantRegexpCharacterClass:
   Enabled: true
 
@@ -77,4 +80,3 @@ Style/RedundantRegexpEscape:
 
 Style/SlicingWithRange:
   Enabled: true
-
