@@ -23,6 +23,7 @@ namespace :facts do
       Rake::Task['facts:songs:first_broadcast'].invoke
       Rake::Task['facts:songs:latest_broadcast'].invoke
       Rake::Task['facts:songs:total_broadcasts'].invoke
+      Rake::Task['facts:songs:average_seconds_between_broadcasts'].invoke
     end
 
     desc 'Gathers first broadcasts for songs'
@@ -38,6 +39,11 @@ namespace :facts do
     desc 'Gathers total broadcasts for songs'
     task total_broadcasts: :environment do
       Facts::Song::TotalBroadcastsCalculator.new.call!
+    end
+
+    desc 'Gathers average seconds between broadcasts for songs'
+    task average_seconds_between_broadcasts: :environment do
+      Facts::Song::AverageSecondsBetweenBroadcastsCalculator.new.call!
     end
   end
 end

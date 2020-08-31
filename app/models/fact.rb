@@ -8,7 +8,8 @@ class Fact < ApplicationRecord
   enum key: {
     first_broadcasted_at: 'first_broadcasted_at',
     latest_broadcasted_at: 'latest_broadcasted_at',
-    total_broadcasts: 'total_broadcasts'
+    total_broadcasts: 'total_broadcasts',
+    average_seconds_between_broadcasts: 'average_seconds_between_broadcasts'
   }
 
   def decorated_value
