@@ -3,6 +3,19 @@ namespace :facts do
   task all: :environment do
     Rake::Task['facts:songs:all'].invoke
     Rake::Task['facts:stations:all'].invoke
+    Rake::Task['facts:artists:all'].invoke
+  end
+
+  namespace :artists do
+    desc 'Gathers all facts for artists'
+    task all: :environment do
+      Rake::Task['facts:artists:total_broadcasts'].invoke
+    end
+
+    desc 'Gathers total broadcasts for artists'
+    task total_broadcasts: :environment do
+      Facts::Artist::TotalBroadcastsCalculator.new.call!
+    end
   end
 
   namespace :stations do

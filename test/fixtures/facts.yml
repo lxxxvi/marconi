@@ -21,3 +21,9 @@ srf3_total_broadcasts_fact:
   factable: srf3 (Station)
   key: 'total_broadcasts'
   value: '1'
+
+beatles_total_broadcasts_fact:
+  station: srf3
+  factable: beatles (Artist)
+  key: 'total_broadcasts'
+  value: '1'
