@@ -1,0 +1,60 @@
+env:
+  RUBY_VERSION: 2.7
+  NODE_VERSION: 12
+  RAILS_ENV: test
+  POSTGRES_PASSWORD: "postgres"
+
+name: Continuous Integration
+on: [pull_request]
+
+jobs:
+  run_all_tests:
+    name: Run all tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v1
+
+      # RUBY SETUP
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+
+      - name: Cache Ruby gems
+        uses: actions/cache@v2
+        id: bundler-cache
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+
+      - name: Configure bundle to use vendor/path
+        run: bundle config path vendor/bundle --local
+
+      - name: Bundle install
+        run: bundle install --jobs 4 --retry 3
+
+      # TEST SETUP & RUN
+      - name: Create master.key
+        env:
+          RAILS_MASTER_KEY_FOR_TEST: ${{ secrets.RAILS_MASTER_KEY_FOR_TEST }}
+        run: echo "${RAILS_MASTER_KEY_FOR_TEST}" > ./config/master.key
+
+      - name: Setup database
+        run: |
+          cp ./.github/workflows/templates/database.yml.github-actions config/database.yml
+          bin/rails db:test:prepare
+
+      - name: bin/test
+        run: bin/test
+
