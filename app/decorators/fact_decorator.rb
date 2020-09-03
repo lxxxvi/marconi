@@ -1,6 +1,7 @@
 class FactDecorator < BaseDecorator
   VALUE_DECORATOR_METHODS = {
     artist: {
+      first_broadcasted_at: :to_datetime,
       total_broadcasts: :to_i
     },
     song: {
