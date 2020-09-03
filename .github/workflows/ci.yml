@@ -37,6 +37,8 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
       - name: Configure bundle to use vendor/path
         run: bundle config path vendor/bundle --local
