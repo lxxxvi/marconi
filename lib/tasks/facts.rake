@@ -10,6 +10,7 @@ namespace :facts do
     desc 'Gathers all facts for artists'
     task all: :environment do
       Rake::Task['facts:artists:first_broadcasted_at'].invoke
+      Rake::Task['facts:artists:latest_broadcasted_at'].invoke
       Rake::Task['facts:artists:total_broadcasts'].invoke
 
       # run at the end
@@ -21,9 +22,14 @@ namespace :facts do
       CachedFactsTableCreator.new(Artist).create!
     end
 
-    desc 'Gathers total broadcasts for artists'
+    desc 'Gathers first broadcasted at for artists'
     task first_broadcasted_at: :environment do
       Facts::Artist::FirstBroadcastedAtCalculator.new.call!
+    end
+
+    desc 'Gathers latest broadcasts for artists'
+    task latest_broadcasted_at: :environment do
+      Facts::Artist::LatestBroadcastedAtCalculator.new.call!
     end
 
     desc 'Gathers total broadcasts for artists'
