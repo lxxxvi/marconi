@@ -1,4 +1,6 @@
 class Song < ApplicationRecord
+  include CachedFacts
+
   validates :title, presence: true
   validates :title, uniqueness: { scope: :artist }
 
