@@ -7,6 +7,7 @@ namespace :facts do
     Rake::Task['facts:artists:all'].invoke
   end
 
+  # artists
   namespace :artists do
     desc 'Gathers all facts for artists'
     task all: :environment do
@@ -46,7 +47,7 @@ namespace :facts do
     end
   end
 
-
+  # stations
   namespace :stations do
     desc 'Gathers all facts for stations'
     task all: :environment do
@@ -59,7 +60,7 @@ namespace :facts do
     end
   end
 
-
+  # songs
   namespace :songs do
     desc 'Gathers all facts for songs'
     task all: :environment do
