@@ -1,17 +1,21 @@
 namespace :facts do
   desc 'Gathers all facts'
   task all: :environment do
+    # order matters!
     Rake::Task['facts:songs:all'].invoke
     Rake::Task['facts:stations:all'].invoke
     Rake::Task['facts:artists:all'].invoke
   end
 
+  # artists
   namespace :artists do
     desc 'Gathers all facts for artists'
     task all: :environment do
+      # order matters!
       Rake::Task['facts:artists:first_broadcasted_at'].invoke
       Rake::Task['facts:artists:latest_broadcasted_at'].invoke
       Rake::Task['facts:artists:total_broadcasts'].invoke
+      Rake::Task['facts:artists:average_seconds_between_broadcasts'].invoke
 
       # run at the end
       Rake::Task['facts:artists:create_cache'].invoke
@@ -36,8 +40,14 @@ namespace :facts do
     task total_broadcasts: :environment do
       Facts::Artist::TotalBroadcastsCalculator.new.call!
     end
+
+    desc 'Gathers average seconds between broadcasts for artists'
+    task average_seconds_between_broadcasts: :environment do
+      Facts::Artist::AverageSecondsBetweenBroadcastsCalculator.new.call!
+    end
   end
 
+  # stations
   namespace :stations do
     desc 'Gathers all facts for stations'
     task all: :environment do
@@ -50,9 +60,11 @@ namespace :facts do
     end
   end
 
+  # songs
   namespace :songs do
     desc 'Gathers all facts for songs'
     task all: :environment do
+      # order matters!
       Rake::Task['facts:songs:first_broadcast'].invoke
       Rake::Task['facts:songs:latest_broadcast'].invoke
       Rake::Task['facts:songs:total_broadcasts'].invoke

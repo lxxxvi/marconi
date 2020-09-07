@@ -3,7 +3,8 @@ class FactDecorator < BaseDecorator
     artist: {
       first_broadcasted_at: :to_datetime,
       latest_broadcasted_at: :to_datetime,
-      total_broadcasts: :to_i
+      total_broadcasts: :to_i,
+      average_seconds_between_broadcasts: :to_i
     },
     song: {
       first_broadcasted_at: :to_datetime,
