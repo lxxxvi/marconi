@@ -15,12 +15,16 @@ class Google::CustomSearchApi
     search_result['items']
   end
 
+  def query_url
+    "https://www.googleapis.com/customsearch/v1?#{to_query_params(params)}"
+  end
+
   private
 
   def perform_search
-    URI.open(google_query_url).read
+    URI.open(query_url).read
   rescue OpenURI::HTTPError => e
-    Rails.logger.error("Called URL: #{google_query_url}")
+    Rails.logger.error("Called URL: #{query_url}")
     raise e
   end
 
@@ -32,15 +36,11 @@ class Google::CustomSearchApi
     hash.map { |key, value| "#{key}=#{value}" }.join('&')
   end
 
-  def google_query_url
-    "https://www.googleapis.com/customsearch/v1?#{to_query_params(params)}"
-  end
-
   def params
     {
       key: Rails.application.credentials[:google_custom_search_api_key],
       cx: HITPARADE_CH_SEARCH_ENGINE_ID,
-      siteSearch: 'hitparade.ch/song',
+      siteSearch: CGI.escape('hitparade.ch/song'),
       siteSearchFilter: 'i',
       num: '1',
       q: to_google_q(@search_term)

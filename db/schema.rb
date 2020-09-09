@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_070352) do
+ActiveRecord::Schema.define(version: 2020_09_10_150100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "tablefunc"
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
@@ -26,13 +27,43 @@ ActiveRecord::Schema.define(version: 2020_06_18_070352) do
     t.bigint "song_id", null: false
     t.bigint "station_id", null: false
     t.datetime "broadcasted_at", null: false
-    t.string "external_key"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "external_key"
     t.index ["song_id"], name: "index_broadcasts_on_song_id"
-    t.index ["station_id", "broadcasted_at"], name: "index_broadcasts_on_station_id_and_broadcasted_at", unique: true
     t.index ["station_id", "external_key"], name: "index_broadcasts_on_station_id_and_external_key", unique: true
+    t.index ["station_id", "song_id", "broadcasted_at"], name: "index_broadcasts_on_station_id_and_song_id_and_broadcasted_at", unique: true
     t.index ["station_id"], name: "index_broadcasts_on_station_id"
+  end
+
+  create_table "cached_artist_facts", id: false, force: :cascade do |t|
+    t.integer "station_id"
+    t.integer "artist_id"
+    t.string "average_seconds_between_broadcasts"
+    t.string "first_broadcasted_at"
+    t.string "latest_broadcasted_at"
+    t.string "total_broadcasts"
+    t.index ["artist_id"], name: "index_artist_id_on_cached_artist_facts"
+  end
+
+  create_table "cached_song_facts", id: false, force: :cascade do |t|
+    t.integer "station_id"
+    t.integer "song_id"
+    t.string "average_seconds_between_broadcasts"
+    t.string "first_broadcasted_at"
+    t.string "latest_broadcasted_at"
+    t.string "total_broadcasts"
+    t.index ["song_id"], name: "index_song_id_on_cached_song_facts"
+  end
+
+  create_table "cleaned_broadcasts", id: false, force: :cascade do |t|
+    t.bigint "broadcast_id"
+    t.bigint "song_id"
+    t.bigint "station_id"
+    t.datetime "broadcasted_at"
+    t.datetime "previous_broadcasted_at"
+    t.datetime "next_broadcasted_at"
+    t.index ["broadcast_id"], name: "index_broadcast_id_on_cleaned_broadcasts"
   end
 
   create_table "external_keys", force: :cascade do |t|
@@ -66,6 +97,10 @@ ActiveRecord::Schema.define(version: 2020_06_18_070352) do
     t.bigint "artist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "ch_charts_scraper_enabled", default: true, null: false
+    t.string "ch_charts_scraper_url"
+    t.string "ch_charts_scraper_status", null: false
+    t.datetime "ch_charts_scraper_status_updated_at", null: false
     t.index ["artist_id", "title"], name: "index_songs_on_artist_id_and_title", unique: true
     t.index ["artist_id"], name: "index_songs_on_artist_id"
   end
