@@ -2,7 +2,6 @@ namespace :facts do
   desc 'Gathers all facts'
   task all: :environment do
     # order matters!
-    Rake::Task['facts:broadcasts:all'].invoke
     Rake::Task['facts:songs:all'].invoke
     Rake::Task['facts:stations:all'].invoke
     Rake::Task['facts:artists:all'].invoke
@@ -45,20 +44,6 @@ namespace :facts do
     desc 'Gathers average seconds between broadcasts for artists'
     task average_seconds_between_broadcasts: :environment do
       Facts::Artist::AverageSecondsBetweenBroadcastsCalculator.new.call!
-    end
-  end
-
-  # broadcasts TO BE MOVED
-  raise
-  namespace :broadcasts do
-    desc 'Tasks for broadcasts'
-    task all: :environment do
-      Rake::Task['facts:broadcasts:create_cleaned_broadcasts'].invoke
-    end
-
-    desc 'Creates cleaned_broadcasts table'
-    task create_cleaned_broadcasts: :environment do
-      CleanedBroadcastsTableCreator.create!
     end
   end
 
