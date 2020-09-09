@@ -17,7 +17,7 @@ class HerokuRakeTest < ActiveSupport::TestCase
   def stub_srf3
     stub_request(
       :get,
-      %r{https://www.srf.ch/songlog/.*}
+      %r{^https://www.srf.ch/songlog/.*$}
     ).with(
       headers: {
         'Accept' => '*/*',
