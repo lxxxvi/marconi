@@ -1,3 +1,12 @@
+## Setup
+
+`google_custom_search_api_key` is required for the Google Custom Search API.
+
+Set encryption keys:
+
+`./config/master.key` : secret
+`./config/credentials/test.key` : `f2904ff27c5c71196618b6f6beaa9ca0`
+
 ## How to add a new fact calculator
 
 1. Create calculator service class in `./app/services/facts/(artist|song|station)/[name]_calculator.rb`
