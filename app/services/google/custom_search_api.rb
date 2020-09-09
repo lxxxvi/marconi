@@ -1,0 +1,2 @@
+class Google::CustomSearchApi
+end
