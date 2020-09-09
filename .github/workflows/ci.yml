@@ -50,7 +50,7 @@ jobs:
       - name: Create master.key
         env:
           RAILS_MASTER_KEY_FOR_TEST: ${{ secrets.RAILS_MASTER_KEY_FOR_TEST }}
-        run: echo "${RAILS_MASTER_KEY_FOR_TEST}" > ./config/master.key
+        run: echo "${RAILS_MASTER_KEY_FOR_TEST}" > ./config/credentials/test.key
 
       - name: Setup database
         run: |
