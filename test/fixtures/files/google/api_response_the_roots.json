@@ -8,27 +8,31 @@
     "request": [
       {
         "title": "Google Custom Search - The Roots The Seed (2.0)",
-        "totalResults": "394",
+        "totalResults": "129",
         "searchTerms": "The Roots The Seed (2.0)",
-        "count": 3,
+        "count": 1,
         "startIndex": 1,
         "inputEncoding": "utf8",
         "outputEncoding": "utf8",
         "safe": "off",
-        "cx": "__SEARCH-ENGINE-ID__"
+        "cx": "a585049f35d8e28ca",
+        "siteSearch": "hitparade.ch/song",
+        "siteSearchFilter": "i"
       }
     ],
     "nextPage": [
       {
         "title": "Google Custom Search - The Roots The Seed (2.0)",
-        "totalResults": "394",
+        "totalResults": "129",
         "searchTerms": "The Roots The Seed (2.0)",
-        "count": 3,
-        "startIndex": 4,
+        "count": 1,
+        "startIndex": 2,
         "inputEncoding": "utf8",
         "outputEncoding": "utf8",
         "safe": "off",
-        "cx": "__SEARCH-ENGINE-ID__"
+        "cx": "a585049f35d8e28ca",
+        "siteSearch": "hitparade.ch/song",
+        "siteSearchFilter": "i"
       }
     ]
   },
@@ -36,23 +40,23 @@
     "title": "hitparade.ch"
   },
   "searchInformation": {
-    "searchTime": 0.320733,
-    "formattedSearchTime": "0.32",
-    "totalResults": "394",
-    "formattedTotalResults": "394"
+    "searchTime": 0.415101,
+    "formattedSearchTime": "0.42",
+    "totalResults": "129",
+    "formattedTotalResults": "129"
   },
   "items": [
     {
       "kind": "customsearch#result",
       "title": "The Roots feat. Cody ChesnuTT - The Seed (2.0) - hitparade.ch",
-      "htmlTitle": "\u003cb\u003eThe Roots\u003c/b\u003e feat. Cody ChesnuTT - \u003cb\u003eThe Seed\u003c/b\u003e (\u003cb\u003e2.0\u003c/b\u003e) - hitparade.ch",
+      "htmlTitle": "<b>The Roots</b> feat. Cody ChesnuTT - <b>The Seed</b> (<b>2.0</b>) - hitparade.ch",
       "link": "https://hitparade.ch/song/The-Roots-feat.-Cody-ChesnuTT/The-Seed-(2.0)-5597",
       "displayLink": "hitparade.ch",
       "snippet": "The Roots Künstlerportal. CHARTS; SONGS; ALBEN; DVDs; BESTENLISTE. \nSingles - Schweizer Hitparade. Titel, Eintritt, Peak ...",
-      "htmlSnippet": "\u003cb\u003eThe Roots\u003c/b\u003e Künstlerportal. CHARTS; SONGS; ALBEN; DVDs; BESTENLISTE. \u003cbr\u003e\nSingles - Schweizer Hitparade. Titel, Eintritt, Peak&nbsp;...",
+      "htmlSnippet": "<b>The Roots</b> Künstlerportal. CHARTS; SONGS; ALBEN; DVDs; BESTENLISTE. <br>\nSingles - Schweizer Hitparade. Titel, Eintritt, Peak&nbsp;...",
       "cacheId": "pItKPJY14GAJ",
       "formattedUrl": "https://hitparade.ch/song/The-Roots-feat.-Cody.../The-Seed-(2.0)-5597",
-      "htmlFormattedUrl": "https://hitparade.ch/song/The-\u003cb\u003eRoots\u003c/b\u003e-feat.-Cody.../The-\u003cb\u003eSeed\u003c/b\u003e-(\u003cb\u003e2.0\u003c/b\u003e)-5597",
+      "htmlFormattedUrl": "https://hitparade.ch/song/The-<b>Roots</b>-feat.-Cody.../The-<b>Seed</b>-(<b>2.0</b>)-5597",
       "pagemap": {
         "cse_thumbnail": [
           {
@@ -87,104 +91,6 @@
         "cse_image": [
           {
             "src": "https://i.ytimg.com/vi/ojC0mg2hJCc/hqdefault.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "kind": "customsearch#result",
-      "title": "Cody Chesnutt - The Seed - hitparade.ch",
-      "htmlTitle": "Cody Chesnutt - \u003cb\u003eThe Seed\u003c/b\u003e - hitparade.ch",
-      "link": "https://hitparade.ch/song/Cody-Chesnutt/The-Seed-163978",
-      "displayLink": "hitparade.ch",
-      "snippet": "Das Original des Roots Hits. Text und Melodie sind gleich. Aber die 2.0 Version \nder Roots hat eindeutig mehr Saft. Aber alleine für die folgenden coolen Zeilen ...",
-      "htmlSnippet": "Das Original des \u003cb\u003eRoots\u003c/b\u003e Hits. Text und Melodie sind gleich. Aber die \u003cb\u003e2.0\u003c/b\u003e Version \u003cbr\u003e\nder \u003cb\u003eRoots\u003c/b\u003e hat eindeutig mehr Saft. Aber alleine für die folgenden coolen Zeilen&nbsp;...",
-      "cacheId": "MuuJTNk8_sYJ",
-      "formattedUrl": "https://hitparade.ch/song/Cody-Chesnutt/The-Seed-163978",
-      "htmlFormattedUrl": "https://hitparade.ch/song/Cody-Chesnutt/The-\u003cb\u003eSeed\u003c/b\u003e-163978",
-      "pagemap": {
-        "cse_thumbnail": [
-          {
-            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4TOwFXetOQocj-bPbFUWoywdlY0Rbx5h_Da_5b_RtEExRPRYuwYyH8uGo",
-            "width": "300",
-            "height": "137"
-          }
-        ],
-        "review-aggregate": [
-          {
-            "itemreviewed": "Cody Chesnutt - The Seed"
-          }
-        ],
-        "rating": [
-          {
-            "average": "3.33",
-            "best": "6",
-            "worst": "1",
-            "votes": "6"
-          }
-        ],
-        "metatags": [
-          {
-            "msapplication-tilecolor": "#2d89ef",
-            "msapplication-config": "/images/icons/browserconfig.xml",
-            "theme-color": "#ffffff",
-            "viewport": "width=device-width, initial-scale=1",
-            "author": "Steffen Hung",
-            "msapplication-tileimage": "/images/icons/mstile-144x144.png"
-          }
-        ],
-        "cse_image": [
-          {
-            "src": "https://hitparade.ch/images/banner_gewinnspiele2.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "kind": "customsearch#result",
-      "title": "The Roots - The Tipping Point - hitparade.ch",
-      "htmlTitle": "\u003cb\u003eThe Roots\u003c/b\u003e - The Tipping Point - hitparade.ch",
-      "link": "https://hitparade.ch/album/The-Roots/The-Tipping-Point-5052",
-      "displayLink": "hitparade.ch",
-      "snippet": "Titel, Eintritt, Peak, Wochen. You Got Me (The Roots feat. Erykah Badu), 06.06.\n1999, 15, 8. The Seed (2.0) (The Roots feat. Cody ChesnuTT), 11.05.2003, 22, \n16.",
-      "htmlSnippet": "Titel, Eintritt, Peak, Wochen. You Got Me (\u003cb\u003eThe Roots\u003c/b\u003e feat. Erykah Badu), 06.06.\u003cbr\u003e\n1999, 15, 8. \u003cb\u003eThe Seed\u003c/b\u003e (\u003cb\u003e2.0\u003c/b\u003e) (\u003cb\u003eThe Roots\u003c/b\u003e feat. Cody ChesnuTT), 11.05.2003, 22, \u003cbr\u003e\n16.",
-      "cacheId": "JL4FXU_9OHcJ",
-      "formattedUrl": "https://hitparade.ch/album/The-Roots/The-Tipping-Point-5052",
-      "htmlFormattedUrl": "https://hitparade.ch/album/The-\u003cb\u003eRoots\u003c/b\u003e/The-Tipping-Point-5052",
-      "pagemap": {
-        "musicalbum": [
-          {
-            "name": "The Roots - The Tipping Point"
-          }
-        ],
-        "cse_thumbnail": [
-          {
-            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSM1UgoudY0_y-DYdH1ssjJVAznEl9h4thi2yQZCPPLZqdS-GNFwxyhvGc",
-            "width": "200",
-            "height": "200"
-          }
-        ],
-        "aggregaterating": [
-          {
-            "ratingvalue": "5.08",
-            "reviewcount": "12",
-            "worstrating": "1",
-            "bestrating": "6"
-          }
-        ],
-        "metatags": [
-          {
-            "msapplication-tilecolor": "#2d89ef",
-            "msapplication-config": "/images/icons/browserconfig.xml",
-            "theme-color": "#ffffff",
-            "viewport": "width=device-width, initial-scale=1",
-            "author": "Steffen Hung",
-            "msapplication-tileimage": "/images/icons/mstile-144x144.png"
-          }
-        ],
-        "cse_image": [
-          {
-            "src": "https://hitparade.ch/cdimag/the_roots-the_tipping_point_a.jpg"
           }
         ]
       }
