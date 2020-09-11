@@ -1,7 +1,15 @@
+DEFAULTS: &DEFAULTS
+  ch_charts_scraper_enabled: true
+  ch_charts_scraper_url:
+  ch_charts_scraper_status: 'new'
+  ch_charts_scraper_status_updated_at: <%= Time.zone.now %>
+
 beatles_yesterday:
+  <<: *DEFAULTS
   title: "Yesterday"
   artist: beatles
 
 beatles_help:
+  <<: *DEFAULTS
   title: "Help!"
   artist: beatles
