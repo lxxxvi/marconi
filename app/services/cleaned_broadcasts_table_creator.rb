@@ -27,7 +27,7 @@ module CleanedBroadcastsTableCreator
   end
 
   def create_table_sql
-    <<~SQL
+    <<~SQL.squish
       CREATE TABLE #{table_name}
       AS
       WITH broadcasts_with_previous AS (
@@ -63,7 +63,7 @@ module CleanedBroadcastsTableCreator
   end
 
   def add_index_on_foreign_key_sql
-    <<~SQL
+    <<~SQL.squish
       CREATE INDEX index_broadcast_id_on_#{table_name}
       ON #{table_name}
       (

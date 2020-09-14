@@ -8,7 +8,7 @@ class Facts::Artist::TotalBroadcastsCalculator < Facts::CalculatorBase
   end
 
   def calculated_data_sql
-    <<~SQL
+    <<~SQL.squish
       SELECT b.station_id     AS station_id
            , s.artist_id      AS factable_id
            , count(*)         AS value

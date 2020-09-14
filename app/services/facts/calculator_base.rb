@@ -13,7 +13,7 @@ class Facts::CalculatorBase
   end
 
   def upsert_statement_sql
-    <<~SQL
+    <<~SQL.squish
       WITH
       static_data AS (
         SELECT '#{factable_type}'     AS factable_type

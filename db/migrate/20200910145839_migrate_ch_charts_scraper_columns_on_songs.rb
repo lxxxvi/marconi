@@ -6,7 +6,7 @@ class MigrateChChartsScraperColumnsOnSongs < ActiveRecord::Migration[6.0]
   private
 
   def migration_sql
-    <<~SQL
+    <<~SQL.squish
       UPDATE songs
          SET ch_charts_scraper_status = 'new'
            , ch_charts_scraper_status_updated_at = NOW()

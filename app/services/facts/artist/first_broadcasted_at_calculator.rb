@@ -8,7 +8,7 @@ class Facts::Artist::FirstBroadcastedAtCalculator < Facts::CalculatorBase
   end
 
   def calculated_data_sql
-    <<~SQL
+    <<~SQL.squish
       SELECT b.station_id        AS station_id
            , s.artist_id         AS factable_id
            , min(broadcasted_at) AS value

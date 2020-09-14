@@ -8,7 +8,7 @@ class Facts::Song::LatestBroadcastedAtCalculator < Facts::CalculatorBase
   end
 
   def calculated_data_sql
-    <<~SQL
+    <<~SQL.squish
       SELECT station_id             AS station_id
            , song_id                AS factable_id
            , max(broadcasted_at)    AS value

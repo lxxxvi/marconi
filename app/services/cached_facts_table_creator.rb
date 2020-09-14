@@ -54,7 +54,7 @@ class CachedFactsTableCreator
   end
 
   def ordered_list_of_keys_sql
-    <<~SQL
+    <<~SQL.squish
       SELECT DISTINCT
              f.key     AS key
         FROM facts f
@@ -64,7 +64,7 @@ class CachedFactsTableCreator
   end
 
   def create_temporary_table_sql
-    <<~SQL
+    <<~SQL.squish
       CREATE TEMPORARY TABLE #{temporary_table_name}
       AS
       WITH
@@ -114,7 +114,7 @@ class CachedFactsTableCreator
   end
 
   def create_facts_table_sql
-    <<~SQL
+    <<~SQL.squish
       CREATE TABLE #{cached_facts_table_name}
       AS
       WITH
@@ -145,7 +145,7 @@ class CachedFactsTableCreator
   end
 
   def add_index_on_foreign_key_sql
-    <<~SQL
+    <<~SQL.squish
       CREATE INDEX #{index_name}
       ON #{cached_facts_table_name}
       (
