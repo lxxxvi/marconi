@@ -6,8 +6,8 @@ ruby '2.7.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bugsnag'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
+gem 'puma'
+gem 'rails'
 gem 'webmock'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
