@@ -1,3 +1,5 @@
+![Continuous Integration](https://github.com/lxxxvi/marconi/workflows/Continuous%20Integration/badge.svg)
+
 ## Setup
 
 `google_custom_search_api_key` is required for the Google Custom Search API.
