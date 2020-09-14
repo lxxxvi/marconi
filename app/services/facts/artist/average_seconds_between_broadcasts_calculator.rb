@@ -8,7 +8,7 @@ class Facts::Artist::AverageSecondsBetweenBroadcastsCalculator < Facts::Calculat
   end
 
   def calculated_data_sql
-    <<~SQL
+    <<~SQL.squish
       WITH artists_with_multiple_broadcasts_facts AS (
         SELECT station_id                       AS station_id
              , factable_type                    AS factable_type
