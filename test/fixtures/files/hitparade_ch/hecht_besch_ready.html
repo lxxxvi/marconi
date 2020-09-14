@@ -1,0 +1,1338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5 Transitional//EN">
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Die Offizielle Schweizer Hitparade"><meta name="keywords" content="Top 100 Swiss Chart Switzerland Schweiz Charts Music Musik Hitparade Top Die Offizielle Schweizer Swiss IFPI Media Control DRS 3 DRS3 Official Kino Kinohitparade Movie Movies Radio Z 24 Top Argovia Swisscharts Cinema Usercharts Netcharts"><meta name="author" content="Steffen Hung"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><link rel="canonical" href="https://hitparade.ch/song/Hecht/Besch-ready-fuer-die-Liebi-vo-mer-1901747"/><link rel="apple-touch-icon-precomposed" href="/touch-icon.png"/>
+<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/images/icons/manifest.json">
+<link rel="shortcut icon" href="/images/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+<meta name="msapplication-config" content="/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+	
+	<title>Hecht - Besch ready für die Liebi vo mer? - hitparade.ch</title><link type="text/css" href="/hitparade9.css?7" rel="stylesheet"/><link type="text/css" href="/mobile.css?13" rel="stylesheet"/><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script><script src="/swfobject.js"></script><link href='https://fonts.googleapis.com/css?family=Bevan&v1' rel='stylesheet' type='text/css'><link rel="stylesheet" href="/font-awesome-4.3.0/css/font-awesome.min.css"><link href="//cdn.rawgit.com/noelboss/featherlight/1.2.0/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" /><script src="//cdn.rawgit.com/noelboss/featherlight/1.2.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function spacerHeight() {
+	if ($('#lbspacer').length==1) {
+		$($('#lbspacer')[0]).height($($('#lbextern')[0]).height()-92)
+	}
+	if ($('#skydiv').length==1) {
+		$($('#skydiv')[0]).css('top',($($('#lbextern')[0]).height()+44)+'px');
+	}
+}
+
+
+$(window).resize(function() {
+	 if ($( window ).width()<400) {
+	 		viewport = document.querySelector("meta[name=viewport]");
+			viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+		} else {
+			viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=1');
+			$menuLeft.removeClass('pushmenu-open');
+			$menuRight.removeClass('pushmenu-open');
+			$('#mmenu').show();
+			$('#pushmenusearch').show();
+ 			$('#mmsearch').hide();
+ 			//$('body').css({"overflow":"hidden"});
+			//$('.body2').css({"overflow-x":"auto"});
+			//$('.container').unbind('touchstart');
+		}
+
+
+});
+
+		function checkLeftMenuScroll() {
+			//alert($('.pushmenu-left div')[0].scrollHeight);
+			//alert($('.pushmenu-left').height());
+			if ($('.pushmenu-left div')[0].scrollHeight > $('.pushmenu-left').height() ) {
+				$('body').unbind('touchmove');
+				$('.pushmenu-left').unbind('touchmove');
+				$('.pushmenu-left').bind('touchmove', function(ev){
+					ev.stopPropagation();
+				})
+			} else {
+				//$('.pushmenu-left').unbind('touchmove');
+				$('body').bind('touchmove', function(ev){
+					ev.preventDefault();
+				})
+				$('.pushmenu-left').unbind('touchmove');
+				$('.pushmenu-left').bind('touchmove', function(ev){
+					ev.preventDefault();
+				})
+			}
+		}
+		
+	$(document).ready(function() {
+		 
+$('body').bind('focusin focus', function(e){
+  e.preventDefault();
+})
+
+if ($( window ).width()<400) {
+	 		viewport = document.querySelector("meta[name=viewport]");
+			viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+		} else {
+ 			//$('body').css({"overflow":"hidden"});
+			//$(".body2").css("overflow-y", "auto");
+			//$(".body2").css("overflow-x", "hidden");
+		}
+	
+	
+		$menuClose = $('#pushmenuclose');
+		$menuClose2 = $('#pushmenuclose2');
+		
+		$menuSearch = $('#pushmenusearch');
+
+		$containerbody = $('#body');
+		
+		$menuLeft = $('.pushmenu-left');
+		$menuRight = $('.pushmenu-right');
+		$nav_list = $('#button-menu');
+		$nav_member = $('#button-member');
+
+		$('.pushmenu-left').bind('touchmove', function(ev){
+			ev.stopPropagation();
+		})
+
+		
+
+
+		
+		$nav_list.click(function() {
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuRight.removeClass('pushmenu-open');
+			$menuLeft.toggleClass('pushmenu-open');
+			$('body').css({"overflow":"hidden"});
+			checkLeftMenuScroll();
+			$('.container').bind('touchstart', function(e){
+							$menuLeft.removeClass('pushmenu-open');
+			$menuRight.removeClass('pushmenu-open');
+			$('#mmenu').show();
+			$('#pushmenusearch').show();
+ 			$('#mmsearch').hide();
+			$('body').css({"overflow":"auto"});
+			
+			$('.container').unbind('touchstart');
+ 			$('body').unbind('touchmove');
+ 			
+
+e.preventDefault()});
+    //lastScrollPos = $('body').scrollTop();
+    
+    //$('.container').bind('touchmove', function(e){e.preventDefault()});
+/*
+   $(document).on('touchmove',function(e){
+      e.preventDefault();
+    });
+    //uses body because jquery on events are called off of the element they are
+    //added to, so bubbling would not work if we used document instead.
+       
+    $('body').on('touchstart','.pushmenu-left',function(e) {
+    	if (e.currentTarget.scrollHeight==$('.pushmenu-left').height()) {
+    		e.stopPropagation();
+    	} else if (e.currentTarget.scrollTop === 0) {
+        e.currentTarget.scrollTop = 1;
+      } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+        e.currentTarget.scrollTop -= 1;
+      }
+    });
+    //prevents preventDefault from being called on document if it sees a scrollable div
+    $('body').on('touchmove','.pushmenu-left',function(e) {
+      e.stopPropagation();
+    });
+
+*/
+
+
+//    $('#overlayer').css({"height":$(document).height()});
+//    $('#overlayer').show();
+			
+			//$('#container').css({"position":"fixed"});
+			//$('.pushmenu').css({"position":"static"});
+		});
+
+		$nav_member.click(function() {
+			$('.container').bind('touchstart', function(e){
+							$menuLeft.removeClass('pushmenu-open');
+			$menuRight.removeClass('pushmenu-open');
+			$('#mmenu').show();
+			$('#pushmenusearch').show();
+ 			$('#mmsearch').hide();
+			$('body').css({"overflow":"auto"});
+			$('.container').unbind('touchstart');
+			$('body').unbind('touchmove');
+				e.preventDefault()});
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toleft');
+			$menuLeft.removeClass('pushmenu-open');
+			$menuRight.toggleClass('pushmenu-open');
+ 			$('body').css({"overflow":"hidden"});
+ 					$('body').bind('touchmove', function(ev){
+					ev.preventDefault();
+				})
+		});
+
+
+		$menuClose.click(function() {
+			$('body').unbind('touchmove');
+			$('.container').unbind('touchstart');
+   // $('#overlayer').hide();
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuLeft.removeClass('pushmenu-open');
+			$('#mmenu').show();
+			$('#pushmenusearch').show();
+ 			$('#mmsearch').hide();
+ 			$('body').css({"overflow":"auto"});
+		});
+		
+		$menuClose2.click(function() {
+			$('body').unbind('touchmove');
+			$('.container').unbind('touchstart');
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toleft');
+			$menuRight.removeClass('pushmenu-open');
+ 			$('body').css({"overflow":"auto"});
+		});
+
+		$menuSearch.click(function() {
+ 			$('#mmenu').hide();
+			$('#pushmenusearch').hide();
+ 			$('#mmsearch').show();
+				$('body').bind('touchmove', function(ev){
+					ev.preventDefault();
+				})
+				$('.pushmenu-left').unbind('touchmove');
+				$('.pushmenu-left').bind('touchmove', function(ev){
+					ev.preventDefault();
+				})
+		});
+
+		$containerbody.click(function() {
+			if ($menuLeft.hasClass('pushmenu-open') || $menuRight.hasClass('pushmenu-open')) $('body').css({"overflow":"auto"});
+			$menuLeft.removeClass('pushmenu-open');
+			$menuRight.removeClass('pushmenu-open');
+			$('#mmenu').show();
+			$('#pushmenusearch').show();
+ 			$('#mmsearch').hide();
+		});
+		
+	});
+	
+</script>
+
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var gptadslots = [];
+  var googletag = googletag || {cmd:[]};
+</script>
+<script>
+  googletag.cmd.push(function() {
+    //Adslot 1 declaration
+    gptadslots.push(googletag.defineSlot('/58108863/hitparade.ch', [[728,90],[994,250],[970,250]], 'div-gpt-ad-7379018-1')
+                             .addService(googletag.pubads()));
+    //Adslot 2 declaration
+    gptadslots.push(googletag.defineSlot('/58108863/hitparade.ch', [[160,600],[300,600]], 'div-gpt-ad-7379018-2')
+                             .addService(googletag.pubads()));
+    //Adslot 3 declaration
+    gptadslots.push(googletag.defineSlot('/58108863/hitparade.ch', [[300,250],[320,50],[320,100]], 'div-gpt-ad-7379018-3')
+                             .addService(googletag.pubads()));
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+</head><body onload="$('#layLanguages').css('left', $('#trLanguages').position().left+16);$('#layLanguages').css('min-width', $('#trLanguages').width());spacerHeight();" class="pushmenu-push">
+
+
+
+
+
+<!--<div style="position:absolute;top:0;left:0;width:100%;red;z-index:9999;display:none;" id="overlayer">
+</div>-->
+<div class="body2" style="position:relative;">
+	
+  <nav class="pushmenu pushmenu-left" id="pushmenu-left" style="overflow:hidden;">
+  <div style="overflow:auto;width:100%;height:100%;">
+  	<i id="pushmenuclose" class="fa fa-times" style="color:#FFFFFF;font-size:30px;float:right;padding:10px;"></i>
+  	<i id="pushmenusearch" class="fa fa-search" style="color:#FFFFFF;font-size:30px;float:right;padding:10px;"></i>
+<div id="mmsearch" style="display:none;"><div style="padding:10px;"><i class="fa fa-search" style="color:#FFFFFF;font-size:30px;"></i>
+<form action="/search.asp" method="get" class="mmsearch">
+	<input type="text" name="search">
+	<select name="cat">
+		<option value="s">Songs</option>
+		<option value="a">Alben</option>
+		<option value="c">Comp.</option>
+		<option value="d">Musik-DVD</option>
+		<option value="i">Interpret</option>
+		<option value="ean">EAN</option>
+		<option value="e">Edelmetall</option>
+		<option value="p">Komp./Prod.</option>
+		<option value="m">Filme</option>
+		<option value="b">Bücher</option>
+		<option value="g">Games</option>
+		<option value="ev">Events</option>
+		<!--<option value="f">Forum</option>-->
+		<option value="fg">Fundgrube</option>
+		
+	</select>
+	<input type="submit" value="Suche">
+	<ul class="mmenusearch">
+		<li><a href="/search.asp"><i class="fa fa-caret-right" style="width:20px;"></i>Erweiterte Suche</a>
+	</ul>
+
+</form>
+</div>
+
+
+</div><div id="mmenu"><ul class="mmenu" id="mm"><li><a href="/index.asp" class="home" style="padding-left:26px;">Home</a></li><li><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Musik</a></li><li><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Film/TV</a></li><li><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Bücher</a></li><li><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Games</a></li><li><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Forum</a></li></ul><ul class="mmenu" id="mm-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Home</a></li><li><a href="/index.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="active"><a href="/music" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="#" onclick="mShowSub('mm-1-1');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Schweizer Hitparade</a></li><li><a href="/awards.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Edelmetall</a></li><li><a href="#" onclick="mShowSub('mm-1-3');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Weitere Charts</a></li><li><a href="#" onclick="mShowSub('mm-1-4');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Music Directory</a></li><li><a href="#" onclick="mShowSub('mm-1-5');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Reviews</a></li><li><a href="#" onclick="mShowSub('mm-1-6');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Events</a></li><li><a href="/interviews.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Interviews</a></li><li><a href="#" onclick="mShowSub('mm-1-8');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Shows</a></li><li><a href="/fundgrube.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Fundgrube</a></li></ul><ul class="mmenu" id="mm-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li><a href="/cinema_overview.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="#" onclick="mShowSub('mm-2-1');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Kino-Hitparade</a></li><li><a href="/dvd.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>DVD/Blu Ray Charts</a></li><li><a href="#" onclick="mShowSub('mm-2-3');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Reviews</a></li><li><a href="#" onclick="mShowSub('mm-2-4');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Serien</a></li></ul><ul class="mmenu" id="mm-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li><a href="/books_overview.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="/book_charts.asp?type=b" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Belletristik</a></li><li><a href="/book_charts.asp?type=t" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Taschenbücher</a></li><li><a href="/book_charts.asp?type=s" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Sachbücher</a></li><li><a href="/book_charts.asp?type=e" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>E-Books</a></li><li><a href="/book_charts.asp?type=k" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Kinder- und Jugendbücher</a></li></ul><ul class="mmenu" id="mm-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li><a href="/games.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="/games_system.asp?system=Total" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Total</a></li><li><a href="/games_system.asp?system=PC" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>PC</a></li><li><a href="/games_system.asp?system=Playstation+4" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>PS4</a></li><li><a href="/games_system.asp?system=Xbox+One" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Xbox One</a></li><li><a href="/games_system.asp?system=Wii+U" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Wii U</a></li><li><a href="/games_system.asp?system=Playstation+3" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>PS3</a></li><li><a href="/games_system.asp?system=Xbox+360" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Xbox 360</a></li><li><a href="/games_system.asp?system=3DS" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>3DS</a></li><li><a href="/games_system.asp?system=Playstation+VITA" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>PS VITA</a></li><li><a href="/games_system.asp?system=Switch" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Switch</a></li><li><a href="/games_system.asp?system=all" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Alle Systeme</a></li><li><a href="#" onclick="mShowSub('mm-4-12');return false;"><i class="fa fa-caret-down" style="width:20px;"></i>Reviews</a></li></ul><ul class="mmenu" id="mm-5" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li><a href="/forum.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="/forum.asp?todo=new" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Neues Thema</a></li><li><a href="/forum.asp?todo=latest" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Letzte Themen</a></li><li><a href="/shoutbox.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Shoutbox</a></li></ul><ul class="mmenu" id="mm-0-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Home</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-0');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Home</a></li><li><a href="/index.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-1-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li><a href="/music" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-1-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Schweizer Hitparade</a></li><li><a href="/charts" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="/charts/singles" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Singles</a></li><li><a href="/charts/alben" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Alben</a></li><li><a href="/charts/compilations" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Compilations</a></li><li><a href="/charts/musik-dvd" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Musik-DVD</a></li><li><a href="/charts/airplay" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Airplay</a></li><li><a href="/newsletter.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Newsletter</a></li><li><a href="/charts/jahreshitparade" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Jahreshitparaden</a></li><li><a href="/charts/best/singles" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Statistiken</a></li><li><a href="/game.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Börsenspiel</a></li></ul><ul class="mmenu" id="mm-1-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Edelmetall</a></li><li><a href="/awards.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-1-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Weitere Charts</a></li><li><a href="/itunes_charts.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>iTunes</a></li><li><a href="/spotify_charts.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Spotify</a></li><li><a href="/online_charts.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Online-Charts</a></li><li><a href="/dj_charts.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Swiss DJ Charts</a></li><li><a href="/usercharts.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Netcharts</a></li></ul><ul class="mmenu" id="mm-1-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Music Directory</a></li><li><a href="/links_ch-artists.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Schweizer Interpreten</a></li><li><a href="/links_de-artists.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Deutsche Interpreten</a></li><li><a href="/links_at-artists.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Österreichische Interpreten</a></li><li><a href="/links_int-artists.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Internationale Interpreten</a></li><li><a href="/links_locations.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Locations</a></li><li><a href="/links_events.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Events</a></li></ul><ul class="mmenu" id="mm-1-5" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Reviews</a></li><li><a href="/reviews.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Songs</a></li><li><a href="/reviews.asp?cat=a&reviews=10" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Alben</a></li><li><a href="/reviews.asp?cat=c&reviews=10" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Compilations</a></li><li><a href="/reviews.asp?cat=u" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Member</a></li><li><a href="/reviews.asp?cat=l" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>50 letzte Reviews</a></li><li><a href="/reviews.asp?cat=ls" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Aktuelle Songs</a></li><li><a href="/reviews.asp?cat=la" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Aktuelle Alben</a></li><li><a href="/reviews_stats.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Statistiken</a></li><li><a href="/artists_fans.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Fans</a></li></ul><ul class="mmenu" id="mm-1-6" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Events</a></li><li><a href="/events.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Konzerte</a></li><li><a href="/event_reports.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Berichte</a></li></ul><ul class="mmenu" id="mm-1-7" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Interviews</a></li><li><a href="/interviews.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-1-8" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Shows</a></li><li><a href="/esc.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Eurovision Song Contest</a></li><li><a href="/grand_prix_der_volksmusik.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>GP der Volksmusik</a></li><li><a href="/zdf_hitparade.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>ZDF-Hitparade</a></li><li><a href="/oscar_songs.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Oscar - Bester Song</a></li></ul><ul class="mmenu" id="mm-1-9" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Musik</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-1');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Fundgrube</a></li><li><a href="/fundgrube.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-2-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li><a href="/cinema_overview.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-2-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Kino-Hitparade</a></li><li><a href="/cinema_charts.asp?region=de" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Deutschschweiz</a></li><li><a href="/cinema_charts.asp?region=fr" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Romandie</a></li></ul><ul class="mmenu" id="mm-2-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>DVD/Blu Ray Charts</a></li><li><a href="/dvd.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-2-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Reviews</a></li><li><a href="/reviews_movie.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Filme</a></li><li><a href="/reviews_movie.asp?cat=u" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Member</a></li><li><a href="/reviews_movie.asp?cat=l" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>50 letzte Reviews</a></li></ul><ul class="mmenu" id="mm-2-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Film/TV</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-2');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Serien</a></li><li><a href="/series.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li><li><a href="/series.asp?todo=reviews" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Reviews</a></li></ul><ul class="mmenu" id="mm-3-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li><a href="/books_overview.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-3-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Belletristik</a></li><li><a href="/book_charts.asp?type=b" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-3-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Taschenbücher</a></li><li><a href="/book_charts.asp?type=t" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-3-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Sachbücher</a></li><li><a href="/book_charts.asp?type=s" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-3-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>E-Books</a></li><li><a href="/book_charts.asp?type=e" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-3-5" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Bücher</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-3');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Kinder- und Jugendbücher</a></li><li><a href="/book_charts.asp?type=k" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li><a href="/games.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Total</a></li><li><a href="/games_system.asp?system=Total" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>PC</a></li><li><a href="/games_system.asp?system=PC" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>PS4</a></li><li><a href="/games_system.asp?system=Playstation+4" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Xbox One</a></li><li><a href="/games_system.asp?system=Xbox+One" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-5" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Wii U</a></li><li><a href="/games_system.asp?system=Wii+U" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-6" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>PS3</a></li><li><a href="/games_system.asp?system=Playstation+3" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-7" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Xbox 360</a></li><li><a href="/games_system.asp?system=Xbox+360" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-8" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>3DS</a></li><li><a href="/games_system.asp?system=3DS" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-9" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>PS VITA</a></li><li><a href="/games_system.asp?system=Playstation+VITA" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-10" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Switch</a></li><li><a href="/games_system.asp?system=Switch" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-11" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Alle Systeme</a></li><li><a href="/games_system.asp?system=all" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-4-12" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Games</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-4');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Reviews</a></li><li><a href="/games_reviews.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Games</a></li><li><a href="/games_reviews.asp?cat=u" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Members</a></li></ul><ul class="mmenu" id="mm-5-0" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li><a href="/forum.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-5-1" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Übersicht</a></li><li><a href="/forum.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-5-2" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Neues Thema</a></li><li><a href="/forum.asp?todo=new" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-5-3" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Letzte Themen</a></li><li><a href="/forum.asp?todo=latest" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul><ul class="mmenu" id="mm-5-4" style="display:none;"><li><a href="/index.asp" class="uc home" style="padding-left:26px;">Home</a></li><li class="mparent" class="uc" style="text-transform:uppercase"><a href="#" onclick="mShowSub('mm');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Forum</a></li><li class="mparent" class="uc"><a href="#" onclick="mShowSub('mm-5');return false;"><i class="fa fa-caret-up" style="width:20px;"></i>Shoutbox</a></li><li><a href="/shoutbox.asp" style="padding-left:26px;"><i class="fa fa-caret-right" style="float:right;margin-top:6px;margin-right:4px;"></i>Übersicht</a></li></ul>
+</div>
+</div>
+
+  </nav>
+  <nav class="pushmenu2 pushmenu-right">
+  	<div><i id="pushmenuclose2" class="fa fa-times" style="color:#FFFFFF;font-size:30px;margin-left:10px;margin-top:10px;"></i></div>
+   	
+	    <div style="padding:10px;font-size:14px;">
+	   		<form action="/login.asp" method="post" name="mmformlogin" class="mmsearch">
+					<div style="margin-bottom:2px;color:#FFFFFF;font-size:10px;">USERNAME</div>
+					<input type="hidden" name="redirect" value="/showitemurl.asp?cat=s&amp;id=1901747">
+					<input type="text" name="login" style="padding:1px 2px;color:#000000;border-radius:3px;border:0px;">
+				
+					<div style="margin-bottom:2px;color:#FFFFFF;margin-top:10px;font-size:10px;">PASSWORT</div>
+					<input type="password" name="password" style="padding:1px 2px;color:#000000;border-radius:3px;border:0px;">
+					<div style="font-size:14px;color:#FFFFFF;"><input type="checkbox" name="remember" value="yes" id="autologin" style="width:16px;"> <label for="autologin">Auto Login</label></div>
+					<input type="submit" value="Login">
+					<div style="margin-bottom:2px;color:#FFFFFF;margin-top:10px;font-size:14px;clear:left;"><a href="/password_reset.asp" style="color:#FFFFFF;">Passwort vergessen?</a></div>
+				</form>
+			</div>
+   	
+		
+		<ul class="mmenusearch" style="position:absolute;bottom:0px;margin-bottom:50px;width:100%;">
+			<li><a href="/impressum.asp"><i class="fa fa-caret-left" style="width:20px;"></i>Impressum</a>
+			<li><a href="/contact.asp"><i class="fa fa-caret-left" style="width:20px;"></i>Kontakt</a>
+		</ul>
+  </nav>
+
+  
+ <script>
+ 	
+ 	function mShowSub(sLevel) {
+ 		$('.mmenu').hide();
+ 		$('#'+sLevel).show();
+ 		checkLeftMenuScroll();
+ 	}
+ 	function mShowSubOnload(sLevel) {
+ 		$('.mmenu').hide();
+ 		$('#'+sLevel).show();
+ 	}
+ 	
+ 	
+ 	mShowSubOnload('mm-1');
+ 	
+ 	
+var mouseX = 0;
+var mouseY = 0;
+
+  $(document).ready(function() {
+  	
+/*  	$('#overlayer').on('touchstart',function(e){
+  e.preventDefault();
+});
+  	$('.pushmenu-left').on('touchmove',function(e){
+  e.stopPropagation();
+});
+*/
+
+
+
+
+
+		$('#layLogin').css('left', $('#trLogin').position().left+4);
+
+
+		$('#trCountries').mousedown(function() {
+			$('#layCountries').stop(true,true).slideDown(500);
+			$("#layLanguages").delay(200).slideUp(200);
+		});
+
+		$('#layCountries').mouseleave(function() {
+			$("#layCountries").delay(200).slideUp(200);
+		});
+
+		$('#layCountries').mouseenter(function() {
+			$('#layCountries').stop(true,true).show();
+		});
+
+		$('#trLanguages').mousedown(function() {
+			$('#layLanguages').stop(true,true).slideDown(500);
+			$("#layCountries").delay(200).slideUp(200);
+		});
+
+		$('#layLanguages').mouseleave(function() {
+			$("#layLanguages").delay(200).slideUp(200);
+		});
+
+		$('#layLanguages').mouseenter(function() {
+			$('#layLanguages').stop(true,true).show();
+		});
+
+
+		$('#trLogin').mouseenter(function() {
+			$('#layLogin').stop(true,true).slideDown(500);
+			if ($('#lbextern').length!=0) {
+				$('#lbextern').hide();
+			};
+		});
+
+		//$('#layLogin').mouseleave(function() {
+		//	$("#layLogin").delay(200).slideUp(200);
+		//});
+
+		$('#layLogin').mouseenter(function() {
+			$('#layLogin').stop(true,true).show();
+		});
+
+		$("body").mousemove(function(e){
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+
+	  	if (e.pageY>$('#logoheader').position().top+200) {
+
+				$('#layLogin').slideUp(200);
+				$('#lbextern').show();
+				hideTop();
+				if (activeNavB!='') $('#'+activeNavB).show();
+				if (activeNavB!='') {
+                	if (document.getElementById(activeNavB) != null) {
+                		document.getElementById(activeNavB).style.display='';
+                    }
+                }
+		}
+	  	if (e.pageY>50) {
+				$('#layLanguages').slideUp(200);
+			}
+	  	if (e.pageY>400) {
+				$('#layCountries').slideUp(200);
+			}
+	  	if (e.pageX>120) {
+				$('#layCountries').slideUp(200);
+			}
+		});
+
+  });
+	
+  </script>
+<div id="container" class="container">	
+	
+	
+	
+		<div style="background-color:#5C9BCD;height:40px;text-align:center;" class="mheader">
+    
+    <div style="width:50px;height:40px;text-align:center;padding-top:6px;float:left;">
+			<i id="button-menu" class="fa fa-bars" style="color:#FFFFFF;font-size:30px;"></i>
+		</div>
+		<div style="width:50px;height:40px;text-align:center;padding-top:6px;float:right;position:relative;">
+			
+			<i id="button-member" class="fa fa-user" style="color:#FFFFFF;font-size:30px;"></i>
+		</div>
+        
+		<img src="/images/logo-mobile.png" style="height:40px;">
+        
+	</div>
+	<div id="body" style="min-height:900px;">
+<!--<div id="nav_list" style="background-color:#000000;">Menu</div>-->
+	<div id="body2">
+		
+	<div id="header" style="margin-left:-30px;margin-top:-14px;">
+		<div style="background-color:#5C9BCD;width:100%;height:30px;">
+			<div style="width:1000px;">
+				<div class="topright" id="trKontakt"><a href="/contact.asp">Kontakt</a></div>
+				<div class="topright" id="trImpressum"><a href="/impressum.asp">Impressum</a></div>
+
+				<div class="topright" id="trRegistrieren"><a href="/signon.asp">Registrieren</a></div>
+				<div class="topright" id="trLogin">Login</div>
+
+				<div class="topleft" style="margin-left:30px;" id="trCountries">Schweiz</div>
+
+				<div class="topleft" style="margin-left:20px;" id="trLanguages">deutsch</div>
+
+			</div>
+		</div>
+	</div>
+
+		
+
+
+
+
+
+<div class="notmobile">
+<div id="lbextern" style="padding-bottom:10px;" class="notmobile">
+	
+
+	
+<div id='div-gpt-ad-7379018-1'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-7379018-1'); });
+  </script>
+</div>
+
+
+</div>
+</div>
+
+		
+			<div style="width:970px;height:90px;background:url(/images/header_logo.png);margin-bottom:10px;" id="logoheader">
+				<div style="float:left;width:410px;height:90px;cursor:pointer;" onclick="document.location.href='/index.asp';"></div>
+				<div style="float:right;margin-top:20px;margin-right:40px;width:243px;">
+					<form action="/search.asp" method="get" onsubmit="submitSearch();return false;">
+						<div style="float:right;margin-right:26px;"><a href="/search.asp" style="font-size:10px;text-decoration:none;">erweiterte Suche</a></div>
+						<div style="font-weight:bold;margin-bottom:2px;">SUCHE</div>
+						<input type="text" style="float:left;width:100px;padding:2px 3px;color:#000000;border:0px;background-color:#5C9BCD;color:#FFFFFF;margin-right:6px;border-radius:3px;" name="search" id="searchField">
+						<input type="text" style="float:left;width:100px;padding:2px 3px;color:#000000;border:0px;background-color:#5C9BCD;color:#FFFFFF;background:url(/images/search_bg.gif) no-repeat;background-position:-148px -6px;border-radius:3px;cursor:pointer;" readonly name="cat" value="Songs" id="trSearch" onclick="if ($('#laySearch').is(':visible')) {$('#laySearch').hide();} else { $('#laySearch').css('left', $('#trSearch').position().left);$('#laySearch').css('top', ($('#trSearch').position().top+$('#trSearch').height()+4)); $('#laySearch').show();}" onkeydown="return showSearchDD(event);">
+						<input type="image" src="/images/gray_right.gif" style="margin-left:2px;float:left;">
+						
+					</form>
+				</div>
+			</div>
+			<script>
+			function submitSearch() {
+				switch ($('#trSearch').val()) {
+					case "Songs":
+						cat='s';
+						break;
+					case "Alben":
+						cat='a';
+						break;
+					case "Comp.":
+						cat='c';
+						break;
+					case "Musik-DVD":
+						cat='d';
+						break;
+					case "Interpret":
+						cat='i';
+						break;
+					case "EAN":
+						cat='ean';
+						break;
+					case "Edelmetall":
+						cat='e';
+						break;
+					case "Komp./Prod.":
+						cat='p';
+						break;
+					case "Filme":
+						cat='m';
+						break;
+					case "Bücher":
+						cat='b';
+						break;
+					case "Games":
+						cat='g';
+						break;
+					case "Events":
+						cat='ev';
+						break;
+					case "Forum":
+						cat='f';
+						break;
+					case "Fundgrube":
+						cat='fg';
+						break;
+					case "Member":
+						cat='members';
+						break;
+				}
+				document.location='/search.asp?search='+escape($('#searchField').val()).replace(/\+/g,"%2B")+"&cat="+cat;
+			}
+			</script>
+			<div style="height:50px;overflow:hidden;">
+<script>activeNavB = '';</script><ul class="topnav"><li><a href="/index.asp" onmouseover="hideTop();if (document.getElementById('nb_home')) { $('#nb_home').show();}">Home</a></li><li><a href="/music" class="active" onmouseover="hideTop();if (document.getElementById('nb_music')) { $('#nb_music').show();}">Musik<script>activeNavB = 'nb_music';</script></a></li><li><a href="/cinema_overview.asp" onmouseover="hideTop();if (document.getElementById('nb_movie')) { $('#nb_movie').show();}">Film/TV</a></li><li><a href="/books_overview.asp" onmouseover="hideTop();if (document.getElementById('nb_books')) { $('#nb_books').show();}">Bücher</a></li><li><a href="/games.asp" onmouseover="hideTop();if (document.getElementById('nb_games')) { $('#nb_games').show();}">Games</a></li><li><a href="/forum.asp" onmouseover="hideTop();if (document.getElementById('nb_forum')) { $('#nb_forum').show();}">Forum</a></li><li id="linkbasket" style="display:none;float:right;"><a href="/basket.asp" style="color:#FFFFFF;background-color:#000000;">Warenkorb</a></li></ul><ul class="topnav2" id="nb_music"><li><a href="/charts">Schweizer Hitparade</a></li><li><a href="/awards.asp">Edelmetall</a></li><li><a href="/itunes_charts.asp">Weitere Charts</a></li><li><a href="/links_ch-artists.asp">Music Directory</a></li><li><a href="/reviews.asp">Reviews</a></li><li><a href="/events.asp">Events</a></li><li><a href="/interviews.asp">Interviews</a></li><li><a href="/esc.asp">Shows</a></li><li><a href="/fundgrube.asp">Fundgrube</a></li></ul><ul class="topnav2" id="nb_movie" style="display:none;"><li><a href="/cinema_charts.asp?region=de">Kino-Hitparade</a></li><li><a href="/dvd.asp">DVD/Blu Ray Charts</a></li><li><a href="/reviews_movie.asp">Reviews</a></li><li><a href="/series.asp">Serien</a></li></ul><ul class="topnav2" id="nb_books" style="display:none;"><li><a href="/book_charts.asp?type=b">Belletristik</a></li><li><a href="/book_charts.asp?type=t">Taschenbücher</a></li><li><a href="/book_charts.asp?type=s">Sachbücher</a></li><li><a href="/book_charts.asp?type=e">E-Books</a></li><li><a href="/book_charts.asp?type=k">Kinder- und Jugendbücher</a></li></ul><ul class="topnav2" id="nb_games" style="display:none;"><li><a href="/games_system.asp?system=Total">Total</a></li><li><a href="/games_system.asp?system=PC">PC</a></li><li><a href="/games_system.asp?system=Playstation+4">PS4</a></li><li><a href="/games_system.asp?system=Xbox+One">Xbox One</a></li><li><a href="/games_system.asp?system=Wii+U">Wii U</a></li><li><a href="/games_system.asp?system=Playstation+3">PS3</a></li><li><a href="/games_system.asp?system=Xbox+360">Xbox 360</a></li><li><a href="/games_system.asp?system=3DS">3DS</a></li><li><a href="/games_system.asp?system=Playstation+VITA">PS VITA</a></li><li><a href="/games_system.asp?system=Switch">Switch</a></li><li><a href="/games_system.asp?system=all">Alle Systeme</a></li><li><a href="/games_reviews.asp">Reviews</a></li></ul><ul class="topnav2" id="nb_forum" style="display:none;"><li><a href="/forum.asp">Übersicht</a></li><li><a href="/forum.asp?todo=new">Neues Thema</a></li><li><a href="/forum.asp?todo=latest">Letzte Themen</a></li><li><a href="/shoutbox.asp">Shoutbox</a></li></ul><ul class="topnav2" id="nb_music_official" style="display:none;"><li><a href="/charts/singles">Singles</a></li><li><a href="/charts/alben">Alben</a></li><li><a href="/charts/compilations">Compilations</a></li><li><a href="/charts/musik-dvd">Musik-DVD</a></li><li><a href="/charts/airplay">Airplay</a></li><li><a href="/newsletter.asp">Newsletter</a></li><li><a href="/charts/jahreshitparade">Jahreshitparaden</a></li><li><a href="/charts/best/singles">Statistiken</a></li><li><a href="/game.asp">Börsenspiel</a></li></ul><ul class="topnav2" id="nb_music_charts" style="display:none;"><li><a href="/itunes_charts.asp">iTunes</a></li><li><a href="/spotify_charts.asp">Spotify</a></li><li><a href="/online_charts.asp">Online-Charts</a></li><li><a href="/dj_charts.asp">Swiss DJ Charts</a></li><li><a href="/usercharts.asp">Netcharts</a></li></ul><ul class="topnav2" id="nb_music_directory" style="display:none;"><li><a href="/links_ch-artists.asp">Schweizer Interpreten</a></li><li><a href="/links_de-artists.asp">Deutsche Interpreten</a></li><li><a href="/links_at-artists.asp">Österreichische Interpreten</a></li><li><a href="/links_int-artists.asp">Internationale Interpreten</a></li><li><a href="/links_locations.asp">Locations</a></li><li><a href="/links_events.asp">Events</a></li></ul><ul class="topnav2" id="nb_music_reviews" style="display:none;"><li><a href="/reviews.asp">Songs</a></li><li><a href="/reviews.asp?cat=a&reviews=10">Alben</a></li><li><a href="/reviews.asp?cat=c&reviews=10">Compilations</a></li><li><a href="/reviews.asp?cat=u">Member</a></li><li><a href="/reviews.asp?cat=l">50 letzte Reviews</a></li><li><a href="/reviews.asp?cat=ls">Aktuelle Songs</a></li><li><a href="/reviews.asp?cat=la">Aktuelle Alben</a></li><li><a href="/reviews_stats.asp">Statistiken</a></li><li><a href="/artists_fans.asp">Fans</a></li></ul><ul class="topnav2" id="nb_music_events" style="display:none;"><li><a href="/events.asp">Konzerte</a></li><li><a href="/event_reports.asp">Berichte</a></li></ul><ul class="topnav2" id="nb_music_shows" style="display:none;"><li><a href="/esc.asp">Eurovision Song Contest</a></li><li><a href="/grand_prix_der_volksmusik.asp">GP der Volksmusik</a></li><li><a href="/zdf_hitparade.asp">ZDF-Hitparade</a></li><li><a href="/oscar_songs.asp">Oscar - Bester Song</a></li></ul><ul class="topnav2" id="nb_movie_charts" style="display:none;"><li><a href="/cinema_charts.asp?region=de">Deutschschweiz</a></li><li><a href="/cinema_charts.asp?region=fr">Romandie</a></li></ul><ul class="topnav2" id="nb_movie_reviews" style="display:none;"><li><a href="/reviews_movie.asp">Filme</a></li><li><a href="/reviews_movie.asp?cat=u">Member</a></li><li><a href="/reviews_movie.asp?cat=l">50 letzte Reviews</a></li></ul><ul class="topnav2" id="nb_movie_series" style="display:none;"><li><a href="/series.asp?todo=reviews">Reviews</a></li></ul><ul class="topnav2" id="nb_games_reviews" style="display:none;"><li><a href="/games_reviews.asp">Games</a></li><li><a href="/games_reviews.asp?cat=u">Members</a></li></ul><script>function hideTop(){document.getElementById('nb_music').style.display='none';document.getElementById('nb_music_official').style.display='none';document.getElementById('nb_music_charts').style.display='none';document.getElementById('nb_music_directory').style.display='none';document.getElementById('nb_music_reviews').style.display='none';document.getElementById('nb_music_events').style.display='none';document.getElementById('nb_music_shows').style.display='none';document.getElementById('nb_movie').style.display='none';document.getElementById('nb_movie_charts').style.display='none';document.getElementById('nb_movie_reviews').style.display='none';document.getElementById('nb_movie_series').style.display='none';document.getElementById('nb_books').style.display='none';document.getElementById('nb_games').style.display='none';document.getElementById('nb_games_reviews').style.display='none';document.getElementById('nb_forum').style.display='none';}</script>
+			</div>
+          
+
+
+                
+<div class="onlymobile">
+<div id='div-gpt-ad-7379018-3'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-7379018-3'); });
+  </script>
+</div>
+</div>
+
+
+
+
+			<div style="padding-bottom:20px;" class="clearfix mcontent">
+			
+			
+<div><h1><span itemprop="itemreviewed">Hecht - Besch ready für die Liebi vo mer?</span></h1><div style="display:none;position:absolute;background-color:#FFFFFF;border-top:1px solid #999999;border-left:1px solid #999999; padding:10px 10px 10px 10px;border-radius:5px;box-shadow: 3px 3px 3px #000; -webkit-box-shadow: 3px 3px 3px #000;-moz-box-shadow: 3px 3px 3px #000;z-index:10;" id="layAdmin"></div><div class="cover"><script src="/lightbox/lightbox.min.js"></script><link href="/lightbox/lightbox.css" rel="stylesheet" /><div id="coverswrapper"><div id="coverswrapperinside"><div class="coverssingle"><a title='Larger image' href="https://media.hitparade.ch/cover/big/hecht-besch_ready_fuer_die_liebi_vo_mer_s.jpg" xonclick="window.open('/cdimage.html?hecht-besch_ready_fuer_die_liebi_vo_mer_s.jpg', 's0','width=320,height=320,top=100,left=100,directories=no,location=no,menubar=no,scroll=no,status=no,titlebar=no,toolbar=no,resizable=1');return false;" data-title="" data-lightbox="covers"><picture><img alt="Cover Hecht - Besch ready f&#252;r die Liebi vo mer?" src=https://hitparade.ch/cdimag/hecht-besch_ready_fuer_die_liebi_vo_mer_s.jpg srcset="https://media.hitparade.ch/cover/200/hecht-besch_ready_fuer_die_liebi_vo_mer_s.jpg, https://media.hitparade.ch/cover/400/hecht-besch_ready_fuer_die_liebi_vo_mer_s.jpg 2x" onError="this.srcset=''" width=200 border=0></picture></a><br>Cover<div style="width:200px;"></div></div></div></div>
+    <script>
+    $(document).ready(function() {
+		$('#coverswrapperinside').width($('.coverssingle').length*210);
+		if ($('#coversmore .moveup').length>0) { $('#coversmore').prepend($('.coverssingle')[0]);$('#coverswrapperinside').prepend($('#coversmore .moveup')[0]); }
+    })
+    </script>
+    </div><div class="clearfix iteminfo1" style="float:left;max-width:770px;"><div style="max-width:365px;margin-bottom:10px;margin-right:10px;float:left;"><h2 style="margin-top:0px;">Song</h2><table class="content table365"><tr><td class="textline"><b>Jahr:</b></td><td class="textline">2019</td></tr><tr><td class="textline"><b>Hörprobe:</b></td><td class="textline"><div style="width:200px;overflow:hidden;"><audio src="https://tools2.hitparade.ch/tools/audio/1900000/1901747.mp3" controls="controls" controlsList="nodownload" style="width:100%;height:40px;"></audio></div></td></tr><tr id="rowkaufen" style="display:none;"><td class="textline"><b>Kaufen:</b></td><td class="textline"><div id="kaufenhitparade" style="display:none;">- <a href="#tracks">Digital auf hitparade.ch</a></div><div id="kaufenexlibris" style="display:none;"></div></tr><tr><td class="textline"><b><a href="#reviews">Durchschnittliche Bewertung:</a></b></td><td class="textline"><b>3.38<div style="background:url(/images/6stars.gif);width:33.8461538461538px;height:10px;float:left;margin-right:6px;"></div></b><br>26 Bewertungen</td></tr><tr id="myreviewtr" style="display:none;"><td class="textline"><b><a href="#myreview">Meine Bewertung:</a></b></td><td class="textline" id="myreviewtd"></td></tr><tr><td class="textline"><b>Persönliche Charts:</b></td><td class="textline"><a href="/members_charts.asp?todo=add&id=1901747&cat=s">In persönliche Hitparade hinzufügen</a></td></tr><tr><td colspan=2 style="background-color:#FFFFFF;"></td></tr></table></div><div class="chartsright"><h2 style="margin-top:0px;">Charts</h2><table class="content table365"><tr><td class="textline"><b>Einstieg:</b></td><td class="textline">08.09.2019 (Rang 9)</td></tr><tr><td class="textline"><b>Zuletzt:</b></td><td class="textline">23.02.2020 (Rang 99)</td></tr><tr><td class="textline"><b>Höchstposition:</b></td><td class="textline">9 (1 Woche)</td></tr><tr><td><b>Chartsverlauf:</b></td><td><a href="#" onclick="$('#layChartrun').css('left', $('#trChartrun').position().left-100);$('#layChartrun').css('top', $('#trChartrun').position().top+20);$('#layChartrun').toggle();$('#layChartrun').draggable();return false;"><img src="/images/chartrun_down.gif" border=0 id="trChartrun"></a></td></tr><tr><td class="textline"><b>Anzahl Wochen:</b></td><td class="textline">25</b></td></tr><tr><td class="textline"><b><a href="/charts/best/singles">Rang auf ewiger Bestenliste</a>:</b></td><td class="textline">2555 (1176 Punkte)</td></tr><tr><td class="textline"><b>Weltweit:</b></td><td class="textline" style="padding-right:0px;"><table border=0 cellpadding=0 cellspacing=0 class="chartsother"><tr><td><b>ch</b>&nbsp;</td><td><a href="http://hitparade.ch/song/Hecht/Besch-ready-fuer-die-Liebi-vo-mer-1901747"><img src="/images/ch.gif" border=0></a> Peak: 9 / Wochen: 25</td></tr></table></td></tr></table><div style="display:none;position:absolute;background-color:#FFFFFF;border-top:1px solid #999999;border-left:1px solid #999999; padding:10px 10px 10px 10px;border-radius:5px;box-shadow: 3px 3px 3px #000; -webkit-box-shadow: 3px 3px 3px #000;-moz-box-shadow: 3px 3px 3px #000;z-index:10;" id="layChartrun"><table class="chartrun"><tr><td><a href="/charts/singles/08-09-2019">08.09.2019</a>:</td><td align=right>&nbsp;N&nbsp;9.</td><td><img src="/images/history.gif" height=14 width=273></td></tr><tr><td><a href="/charts/singles/15-09-2019">15.09.2019</a>:</td><td align=right>&nbsp;42.</td><td><img src="/images/history.gif" height=14 width=174></td></tr><tr><td><a href="/charts/singles/22-09-2019">22.09.2019</a>:</td><td align=right>&nbsp;46.</td><td><img src="/images/history.gif" height=14 width=162></td></tr><tr><td><a href="/charts/singles/29-09-2019">29.09.2019</a>:</td><td align=right>&nbsp;44.</td><td><img src="/images/history.gif" height=14 width=168></td></tr><tr><td><a href="/charts/singles/06-10-2019">06.10.2019</a>:</td><td align=right>&nbsp;50.</td><td><img src="/images/history.gif" height=14 width=150></td></tr><tr><td><a href="/charts/singles/13-10-2019">13.10.2019</a>:</td><td align=right>&nbsp;47.</td><td><img src="/images/history.gif" height=14 width=159></td></tr><tr><td><a href="/charts/singles/20-10-2019">20.10.2019</a>:</td><td align=right>&nbsp;43.</td><td><img src="/images/history.gif" height=14 width=171></td></tr><tr><td><a href="/charts/singles/27-10-2019">27.10.2019</a>:</td><td align=right>&nbsp;31.</td><td><img src="/images/history.gif" height=14 width=207></td></tr><tr><td><a href="/charts/singles/03-11-2019">03.11.2019</a>:</td><td align=right>&nbsp;19.</td><td><img src="/images/history.gif" height=14 width=243></td></tr><tr><td><a href="/charts/singles/10-11-2019">10.11.2019</a>:</td><td align=right>&nbsp;34.</td><td><img src="/images/history.gif" height=14 width=198></td></tr><tr><td><a href="/charts/singles/17-11-2019">17.11.2019</a>:</td><td align=right>&nbsp;46.</td><td><img src="/images/history.gif" height=14 width=162></td></tr><tr><td><a href="/charts/singles/24-11-2019">24.11.2019</a>:</td><td align=right>&nbsp;48.</td><td><img src="/images/history.gif" height=14 width=156></td></tr><tr><td><a href="/charts/singles/01-12-2019">01.12.2019</a>:</td><td align=right>&nbsp;51.</td><td><img src="/images/history.gif" height=14 width=147></td></tr><tr><td><a href="/charts/singles/08-12-2019">08.12.2019</a>:</td><td align=right>&nbsp;53.</td><td><img src="/images/history.gif" height=14 width=141></td></tr><tr><td><a href="/charts/singles/15-12-2019">15.12.2019</a>:</td><td align=right>&nbsp;62.</td><td><img src="/images/history.gif" height=14 width=114></td></tr><tr><td><a href="/charts/singles/22-12-2019">22.12.2019</a>:</td><td align=right>&nbsp;63.</td><td><img src="/images/history.gif" height=14 width=111></td></tr><tr><td><a href="/charts/singles/29-12-2019">29.12.2019</a>:</td><td align=right>&nbsp;90.</td><td><img src="/images/history.gif" height=14 width=30></td></tr><tr><td><a href="/charts/singles/05-01-2020">05.01.2020</a>:</td><td align=right>&nbsp;50.</td><td><img src="/images/history.gif" height=14 width=150></td></tr><tr><td><a href="/charts/singles/12-01-2020">12.01.2020</a>:</td><td align=right>&nbsp;48.</td><td><img src="/images/history.gif" height=14 width=156></td></tr><tr><td><a href="/charts/singles/19-01-2020">19.01.2020</a>:</td><td align=right>&nbsp;55.</td><td><img src="/images/history.gif" height=14 width=135></td></tr><tr><td><a href="/charts/singles/26-01-2020">26.01.2020</a>:</td><td align=right>&nbsp;64.</td><td><img src="/images/history.gif" height=14 width=108></td></tr><tr><td><a href="/charts/singles/02-02-2020">02.02.2020</a>:</td><td align=right>&nbsp;70.</td><td><img src="/images/history.gif" height=14 width=90></td></tr><tr><td><a href="/charts/singles/09-02-2020">09.02.2020</a>:</td><td align=right>&nbsp;98.</td><td><img src="/images/history.gif" height=14 width=6></td></tr><tr><td><a href="/charts/singles/16-02-2020">16.02.2020</a>:</td><td align=right>&nbsp;87.</td><td><img src="/images/history.gif" height=14 width=39></td></tr><tr><td><a href="/charts/singles/23-02-2020">23.02.2020</a>:</td><td align=right>&nbsp;99.</td><td><img src="/images/history.gif" height=14 width=3></td></tr></table></div></div></div>
+<script type="text/javascript" src="/jwplayer.js"></script>
+
+<script type="text/javascript">
+<!--
+	function playBack(mediumId) {
+		$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().removeClass('active');
+		iPlay = iPlay - 1;
+		if (iPlay<0) iPlay=0;
+		$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().addClass('active');
+		jwplayer("playA"+mediumId).load([{ file:"https://tools2.hitparade.ch/tools/audio/"+getPath($('.speak'+mediumId+':eq('+iPlay+')').attr('data-aid'))+".mp3"}]);
+		jwplayer("playA"+mediumId).play(true);
+}
+
+	function playForward(mediumId) {
+		iPlay = iPlay + 1;
+		if (iPlay<$('.speak'+mediumId).length) {
+		$('.speak'+mediumId+':eq('+(iPlay-1)+')').parent().parent().parent().removeClass('active');
+		$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().addClass('active');
+
+		jwplayer("playA"+mediumId).load([{ file:"https://tools2.hitparade.ch/tools/audio/"+getPath($('.speak'+mediumId+':eq('+iPlay+')').attr('data-aid'))+".mp3"}]);
+		jwplayer("playA"+mediumId).play(true);
+	} else {
+		iPlay = iPlay -1;
+	}
+}
+
+	function playMedium(mediumId) {
+		iPlay = 0;
+	$('#mediumbuttons'+mediumId).show();
+	$('.speak'+mediumId).parent().parent().parent().removeClass('active');
+
+		$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().addClass('active');
+
+
+
+    jwplayer("playA"+mediumId).setup({
+height: 26,
+width: 400,
+autostart: true,
+file: "https://tools2.hitparade.ch/tools/audio/"+getPath($('.speak'+mediumId+':eq(0)').attr('data-aid'))+".mp3",
+events:{onComplete: function () {
+$('#mediumlistenrow'+mediumId).show();
+$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().removeClass('active');
+	iPlay = iPlay + 1
+	if (iPlay<$('.speak'+mediumId).length) {
+		$('.speak'+mediumId+':eq('+iPlay+')').parent().parent().parent().addClass('active');
+
+		jwplayer("playA"+mediumId).load([{ file:"https://tools2.hitparade.ch/tools/audio/"+getPath($('.speak'+mediumId+':eq('+iPlay+')').attr('data-aid'))+".mp3"}]);
+		jwplayer("playA"+mediumId).play(true);
+	} else {
+		$('#mediumlistenrow'+mediumId).html('');
+		$('#mediumlistenrow'+mediumId).hide();
+	}
+	
+}}
+    });
+  }
+  function getPath(audioId) {
+  	if(audioId.substr(0,1)=='n') {
+			audioId = "n/" + audioId.substr(1,3) + "0000/" + audioId;
+		} else {
+			audioId = audioId.substr(0,3) + "0000/" + audioId;
+		}
+		return audioId;
+  }
+  
+
+function writeDateTime(tDate) {
+	utcDate = tDate - tDate.getTimezoneOffset() * 60000;
+	newDate = new Date(utcDate);
+	newYear = newDate.getYear();
+	if (newYear<1900) newYear = newYear+1900;
+	newMonth = "0"+(newDate.getMonth()+1);
+	newMonth = newMonth.substr(newMonth.length-2,2);
+	newDay = "0"+(newDate.getDate());
+	newDay = newDay.substr(newDay.length-2,2);
+	newHour = "0"+(newDate.getHours());
+	newHour = newHour.substr(newHour.length-2,2);
+	newMinute = "0"+(newDate.getMinutes());
+	newMinute = newMinute.substr(newMinute.length-2,2);
+	
+	document.write(newDay+"."+newMonth+"."+newYear+" "+newHour+":"+newMinute);
+	
+}
+
+
+//-->
+</script>
+<script type="text/javascript" src="/hitparade.js"></script>
+
+	<style>
+		.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+		</style>
+		<div style="clear:left;max-width:650px;">
+	<div class="videoWrapper">
+	<div id="vplayer"></div>
+	</div>
+</div>
+<script>
+      var logPlay = true;
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('vplayer', {
+          height: '315px',
+          width: '560px',
+          videoId: 'jE1MTMfK94o',
+          playerVars: {
+          	wmode: "transparent", rel: 0, html5: 1
+          },
+          events: {
+          }
+        });
+      }
+	</script>
+	
+<div style="float:right;clear:right;width:300px;" class="notmobile">
+<div class="notmobile">
+<!--<div style="margin-bottom:10px;"><a href="/album/Die-Cooleros/Lebe-Deinen-Traum-287750"><img src="/images/banner_cooleros.jpg" border=0></a></div>-->
+
+
+
+<div id='div-gpt-ad-414204241773038646-3'>
+  <script type='text/javascript'>
+    googletag.defineSlot('/58108863/hitparade.ch', [[300,250],[320,50],[320,100]],'div-gpt-ad-414204241773038646-3')
+      .addService(googletag.pubads())
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();googletag.display('div-gpt-ad-414204241773038646-3');
+  </script>
+</div>
+
+<!--<div><a href="http://www.christmasradio.fm/__hp/" target="_blank" onclick="window.open(this.href, 'xmasradio','width=570,height=590,top=100,left=100,directories=no,location=no,menubar=no,scroll=no,status=no,titlebar=no,toolbar=no,resizable=1');return false;"><img src="/images/hp_xmas.jpg" border=0></a></div>-->
+
+
+<div id-test="a">
+<!-- BEGIN ADITIONTAG Website-Tag -->
+<!--2=1<script type="text/javascript" src="http://imagesrv.adition.com/js/adition.js"></script>
+--><script type="text/javascript" src="https://adfarm1.adition.com/js?wp_id=128229"></script>
+<!-- END ADITIONTAG-->
+</div>
+<!--<div style="margin-top:10px;"><iframe src="/baschi/b2_1.html" scrolling="no" frameborder="0" style="width:300px; height:250px;" allowTransparency="true"></iframe></div>-->
+<!--<div style="margin-top:10px;"><a href="http://www.artesi.ch" target="_blank" rel="nofollow"><img src="/images/rect_artesi.jpg"></a></div>-->
+
+<!--<div style="padding-bottom:10px;"><a href="http://open.spotify.com/user/digster.ch" target="_blank"><img src="/images/rect_spotify.jpg" border=0></a></div>-->
+<!--<div style="margin-top:10px;"><a href="/songduell.asp"><img src="/images/rect_songduell.jpg" border=0></a></div>-->
+<!--<div style="margin-top:10px;"><a href="/song/Airvox/Flame-Of-Life-1366245"><img src="/images/banner_hitparade_flame_of_life_300x150.jpg" border=0></a></div>-->
+
+<!--<div style="margin-top:10px;"><a href="http://www.djbobo.ch/tour-tickets/konzerte" target="_blank"><img src="/images/rect_bobocircus.jpg" border=0></a></div>-->
+<!--<div style="margin-top:10px;"><a href="http://www.artesi.ch" target="_blank"><img src="/images/rect_artesi.jpg" border=0></a></div>-->
+
+
+
+
+<div style="margin-top:10px;"><a href="/gewinnspiele.asp"><img src="/images/banner_gewinnspiele2.jpg" border=0></a></div>
+</div>
+</div>
+<table border=0 cellpadding=0 cellspacing=0 style="min-width:200px; clear: left; max-wdith:650px;"><tr><td>
+
+</td></tr></table>
+
+
+<div class="iteminfo2" style="max-width:600px;clear:left;">
+<br>
+	<script>
+	function showDetails(mediaId) {
+		$.get('/ajax_getpersons.asp?id='+mediaId, function(data) {
+			dataArr = data.split("\n");
+			for (i=0; i<dataArr.length-1; i++) {
+				lineArr = dataArr[i].split("\t");
+				if (lineArr[2]=="Komponist") {
+					idprefix = "m";
+					jobText = "Musik/Text";
+				} else {
+					idprefix = "p";
+					jobText = "Produzent";
+				};
+				elementId = idprefix + mediaId + "cd" + lineArr[0] + "t" + lineArr[1];
+				if (document.getElementById(elementId).innerHTML != '') {
+					document.getElementById(elementId).innerHTML = document.getElementById(elementId).innerHTML + ', <a href="/showperson.asp?name=' + escape(lineArr[3]) + '" style="text-decoration:none;color:#666666;">' + lineArr[3]+'</a>';
+				} else {
+					document.getElementById(elementId).innerHTML = jobText+': <a href="/showperson.asp?name=' + escape(lineArr[3]) + '" style="text-decoration:none;color:#666666;">' + lineArr[3]+'</a>';
+				}
+			}
+		});
+		$.get('/ajax_getreviewscovers.asp?id='+mediaId, function(data) {
+			dataArr = data.split("\n");
+			for (i=0; i<dataArr.length-1; i++) {
+				lineArr = dataArr[i].split("\t");
+				if (lineArr[2]!="" && lineArr[2]!="0") {
+					if (lineArr[7]!="") {
+						myPoints = ' / Meine Bewertung: ' + lineArr[7];
+					} else {
+						myPoints = '';
+					}
+					stars = '<div style="float:left;background:url(/images/6stars.gif);width:'+Math.round(lineArr[3]*10)+'px;height:10px;float:left;"></div>';
+					stars = stars + '<div style="float:left;padding-left:6px">Durchschnittliche Bewertung: '+Math.round(lineArr[3]*100)/100+' / Reviews: '+lineArr[2]+myPoints+'</div>';
+					document.getElementById("r" + mediaId + "cd" + lineArr[0] + "t" + lineArr[1]).innerHTML = stars;
+				};
+				if (lineArr[4]!="") {
+					document.getElementById("c" + mediaId + "cd" + lineArr[0] + "t" + lineArr[1]).innerHTML = 'Coverversion von: <a href="' + lineArr[6] + '" style="text-decoration:none;color:#666666;">'+lineArr[4] + ' - ' + lineArr[5]+'</a>';
+				}
+			}
+		});
+	}
+
+function switchBside(mediaId) {
+  tracknum = $('#m'+mediaId+' .tracknum');
+  if ($(tracknum[0]).html() == $(tracknum[0]).attr('data-tr1')) {
+    datatr = 'data-tr2';
+  } else {
+    datatr = 'data-tr1';
+  }
+  for (i=0;i<tracknum.length;i++) {
+    $(tracknum[i]).html($(tracknum[i]).attr(datatr));
+  }
+}
+	</script>
+	
+</div>
+<h2>Auf folgenden Tonträgern verfügbar</h2><div class="mscroll"><table border=0 cellpadding=0 cellspacing=0 class="content table650"><tr><th>Version</th><th>Länge</th><th>Titel</th><th>Label<br>Nummer</th><th>Format<br>Medium</th><th>Datum</b></th></tr><tr><td class="text">Live</td><td class="text">4:07</td><td class="text"><a href="/album/Hecht/Live-im-Hallenstadion-399500">Live im Hallenstadion</a></td><td class="text">Gadget<br>-</td><td class="text">Album<br>Digital</td><td class="text">03.01.2020</td></tr></table></div><h2>Hecht&nbsp;&nbsp;&nbsp;<a style="font-family:verdana;font-size:11px;font-weight:normal;" href="/artist/Hecht">Künstlerportal</a></h2>
+<ul class="topnav2 inlinenav">
+	<li><a id="charts0" href="#" onclick="clickTab0('charts0');return false;">CHARTS</a></li><li><a id="songs0" href="#" onclick="clickTab0('songs0');return false;">SONGS</a></li><li><a id="albums0" href="#" onclick="clickTab0('albums0');return false;">ALBEN</a></li><li><a id="dvds0" href="#" onclick="clickTab0('dvds0');return false;">DVDs</a></li><li><a id="reviews0" href="#" onclick="loadReviews0('');clickTab0('reviews0');return false;">BESTENLISTE</a></li>
+
+</ul>
+	
+		<div class="mscroll">
+
+
+
+<script>
+	
+	activeTab0 = "charts0"
+	document.getElementById('charts0').style.backgroundColor='#6699CC';
+	document.getElementById('charts0').style.color='#FFFFFF';
+	
+
+	
+	function clickTab0(tab) {
+//	console.log('div'+activeTab0);
+		document.getElementById('div'+activeTab0).style.display='none';
+		document.getElementById(activeTab0).style.backgroundColor='#DDDDDD';
+		document.getElementById(activeTab0).style.color='#000000';
+		activeTab0 = tab;
+			document.getElementById(tab).style.backgroundColor='#6699CC';
+			document.getElementById(tab).style.color='#FFFFFF';
+		document.getElementById('div'+tab).style.display='';
+	}
+	function loadReviews0(sCat) {
+	document.getElementById('divreviews0').innerHTML='<center><img src="/images/wait.gif"></center>';
+			var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+
+    xmlHttp.open('GET', '/ajax_getbestrated.asp?artist=Hecht&field=0&cat='+sCat, true);
+
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText;
+            document.getElementById('divreviews0').innerHTML=resultText;
+        }
+    };
+    xmlHttp.send(null);
+}
+
+	
+	}
+	</script>
+
+		<div id="divcharts0"><table style="width:650px;" class="content"><tr><th colspan=4 class="text"><b>Singles - Schweizer Hitparade</b></th></tr><th>Titel</th><th>Eintritt</th><th>Peak</th><th>Wochen</b></td></tr></th></tr><tr><td class="textline"><a href="/song/Hecht/Charlotta-1469490">Charlotta</a></td><td class="textline">09.04.2017</td><td align=center class="textline">76</td><td align=center class="textline">4</td></tr><tr><td class="textline"><a href="/song/Hecht/Kawasaki-1711199">Kawasaki</a></td><td class="textline">26.11.2017</td><td align=center class="textline">26</td><td align=center class="textline">30</td></tr><tr><td class="textline"><a href="/song/Hecht/Heicho-1742974">Heicho</a></td><td class="textline">22.07.2018</td><td align=center class="textline">83</td><td align=center class="textline">2</td></tr><tr><td class="textline"><a href="/song/Hecht/Besch-ready-fuer-die-Liebi-vo-mer-1901747">Besch ready für die Liebi vo mer?</a></td><td class="textline">08.09.2019</td><td align=center class="textline">9</td><td align=center class="textline">25</td></tr><tr><td colspan=4>&nbsp;</td></tr><tr><th colspan=4 class="text"><b>Alben - Schweizer Hitparade</b></th></tr><th>Titel</th><th>Eintritt</th><th>Peak</th><th>Wochen</b></td></tr></th></tr><tr><td class="textline"><a href="/album/Hecht/Wer-zerscht-s'Meer-gsehd-198245">Wer zerscht s'Meer gsehd</a></td><td class="textline">10.06.2012</td><td align=center class="textline">72</td><td align=center class="textline">3</td></tr><tr><td class="textline"><a href="/album/Hecht/Adam-and-Eva-281809">Adam + Eva</a></td><td class="textline">06.09.2015</td><td align=center class="textline">5</td><td align=center class="textline">56</td></tr><tr><td class="textline"><a href="/album/Hecht/Oh-Boy-351422">Oh Boy</a></td><td class="textline">18.03.2018</td><td align=center class="textline">2</td><td align=center class="textline">55</td></tr><tr><td class="textline"><a href="/album/Hecht/Live-im-Hallenstadion-399500">Live im Hallenstadion</a></td><td class="textline">12.01.2020</td><td align=center class="textline">5</td><td align=center class="textline">3</td></tr></table></div><div id="divsongs0" style="display:none;"><table border=0 cellpadding=0 cellspacing=0 width=574 style="display:inline-table;"><tr><td class="text"><a href="/song/Hecht/24-Bilder-1047827">24 Bilder</a><br><a href="/song/Hecht/Adam-and-Eva-1455209">Adam + Eva</a><br><a href="/song/Hecht/Alti-Songs-1469491">Alti Songs</a><br><a href="/song/Hecht/Autopilot-1033438">Autopilot</a><br><a href="/song/Hecht/Beckehof-1047826">Beckehof</a><br><a href="/song/Hecht/Besch-ready-fuer-die-Liebi-vo-mer-1901747">Besch ready für die Liebi vo mer?</a> <i class="fa fa-video-camera" style="color:#666666;"></i><br><a href="/song/Hecht/Brissago-1469493">Brissago</a><br><a href="/song/Hecht/Buebe-1047829">Buebe</a><br><a href="/song/Hecht/Charlotta-1469490">Charlotta</a><br><a href="/song/Hecht/Chatz-oder-Hund-1047822">Chatz oder Hund</a><br><a href="/song/Hecht/Das-Karussell-1033439">Das Karussell</a><br><a href="/song/Hecht/De-letschti-Zug-1469495">De letschti Zug</a><br><a href="/song/Hecht/Erschti-Tag-vo-mim-Laebe-1742981">Erschti Tag vo mim Läbe</a><br><a href="/song/Hecht/Fiji-1469496">Fiji</a><br><a href="/song/Hecht/Fischermeitschi-1047828">Fischermeitschi</a><br><a href="/song/Hecht/Gsehnd-ues-im-Summer-1982164">Gsehnd üs im Summer</a><br><a href="/song/Hecht/Gymnastique-1422178">Gymnastique</a><br><a href="/song/Hecht/Heicho-1742974">Heicho</a><br><a href="/song/Hecht/Huus-uf-Sand-1469498">Huus uf Sand</a><br><a href="/song/Hecht/Italia-1047824">Italia</a><br></td><td class="text"><a href="/song/Hecht/Kawasaki-1711199">Kawasaki</a> <i class="fa fa-video-camera" style="color:#666666;"></i><br><a href="/song/Hecht/Kingsize-1742975">Kingsize</a><br><a href="/song/Hecht/Klavier-and-Bier-1742982">Klavier + Bier</a><br><a href="/song/Hecht/Lisa-1047825">Lisa</a><br><a href="/song/Hecht/Locherguet-1742977">Locherguet</a><br><a href="/song/Hecht/Matros-1469497">Matros</a><br><a href="/song/Hecht/Oh-Boy-1742972">Oh Boy</a><br><a href="/song/Hecht/Radio-Beromuenster-1742979">Radio Beromünster</a><br><a href="/song/Hecht/Sansibar-1469494">Sansibar</a><br><a href="/song/Hecht/See-springe-1047823">See springe</a><br><a href="/song/Hecht/Sonesweichshaerz-1742980">Sonesweichshärz</a><br><a href="/song/Hecht/Stockholm-1742978">Stockholm</a><br><a href="/song/Hecht/Surfer-1742973">Surfer</a><br><a href="/song/Hecht/Tanze-tanze-1021334">Tanze tanze</a><br><a href="/song/Hecht/Taenzer-1047050">Tänzer</a><br><a href="/song/Hecht/Verlore-im-Meer-1742976">Verlore im Meer</a><br><a href="/song/Hecht/Weder-mol-chli-dra-1043239">Weder mol chli dra</a><br><a href="/song/Hecht/Wenn-d'Sonne-chond-1461391">Wenn d'Sonne chond</a><br><a href="/song/Hecht/Zebra-1469492">Zebra</a><br></tr><tr><td><img src="/images/trans.gif" width=287 height=0></td><td><img src="/images/trans.gif" width=286 height=0></td></tr></table><div class="text" style="margin-top:6px; margin-bottom:6px;"><a href="/add.asp?cat=s&interpret=Hecht" rel="nofollow">Song hinzufügen</a></div></div><div id="divalbums0" style="display:none;"><table border=0 cellpadding=0 cellspacing=0 width=574 style="display:inline-table;"><tr><td class="text"><a href="/album/Hecht/Adam-and-Eva-281809">Adam + Eva</a><br><a href="/album/Hecht/Live-im-Hallenstadion-399500">Live im Hallenstadion</a><br></td><td class="text"><a href="/album/Hecht/Oh-Boy-351422">Oh Boy</a><br><a href="/album/Hecht/Wer-zerscht-s'Meer-gsehd-198245">Wer zerscht s'Meer gsehd</a><br><tr><td><img src="/images/trans.gif" width=287 height=0></td><td><img src="/images/trans.gif" width=286 height=0></td></tr></table><div class="text" style="margin-top:6px; margin-bottom:6px;"><a href="/add.asp?cat=a&interpret=Hecht" rel="nofollow">Album hinzufügen</a></div></div><div id="divdvds0" style="display:none;"><div class="text">Keine DVDs von diesem Künstler in der Datenbank</div><script>$('#dvds0').hide();</script></div><div id="divreviews0" style="display:none;"></div><div>&nbsp;</div></div><h2>Angebote in der Fundgrube</h2><div class="mscroll"><div class="text">Derzeit keine Angebote</div><br><div class="text"><a href="/fundgrube_add.asp?interpret=Hecht&titel=Besch+ready+f%FCr+die+Liebi+vo+mer%3F&cat=s" rel="nofollow">Angebot hinzufügen</a></div></div><a name="reviews"></a><script>r6=0;r5=0;r4=0;r3=0;r2=0;r1=0;</script><h2 style="margin-top:20px;">Reviews</h2><div itemprop="rating" itemscope itemtype="http://schema.org/aggregateRating"><b>Durchschnittliche Bewertung: <span itemprop="ratingValue">3.38</span><meta itemprop="bestRating" content="6" /><meta itemprop="worstRating" content="1" /><span itemprop="itemReviewed" itemscope itemtype="http://schema.org/MusicRecording" style="display:none;"><span itemprop="name">Hecht - Besch ready für die Liebi vo mer?</span></span></b> (Reviews: <span itemprop="reviewCount">26</span>)</div><div id="roverview" style="padding:6px 0px 12px 0px;"></div><table class="content table650"><tr class="review review4 loginStarmania rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4918227"></a><script>tDate = new Date(2019, 8, 4, 8, 58, 3);writeDateTime(tDate);</script><noscript>04.09.2019 10:58</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Starmania">Starmania</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Geht mir hier so, wie bei all ihren Songs. Ich finds sympathisch und nett und das kann man sich gut zwischendurch mal anh&#246;ren. Aber so richtig packend finde ich das auch wieder nicht</div></td></tr><tr class="review review3 loginKirin rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4919750"></a><script>tDate = new Date(2019, 8, 7, 11, 8, 37);writeDateTime(tDate);</script><noscript>07.09.2019 13:08</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Kirin">Kirin</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Massloser Hype um diese Gruppe. B&#252;nzliger geht nicht. Die Texte sind h&#246;chstens auf Realsch&#252;lerniveau, voller Anglizismen, weil so was ja cool ist, die Melodien sind einfallslos und trivial und der Gesang ist schlecht. Anspruchsloser kann Musik nicht sein.</div></td></tr><tr class="review review4 loginfabio rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4920643"></a><script>tDate = new Date(2019, 8, 8, 16, 27, 51);writeDateTime(tDate);</script><noscript>08.09.2019 18:27</noscript><br><b><a class="memberreview" href="/members_search.asp?login=fabio">fabio</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>gut</div></td></tr><tr class="review review5 loginswisspwl rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4920712"></a><script>tDate = new Date(2019, 8, 8, 18, 13, 26);writeDateTime(tDate);</script><noscript>08.09.2019 20:13</noscript><br><b><a class="memberreview" href="/members_search.asp?login=swisspwl">swisspwl</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:50px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">*****</div><script>r5++;</script>Voll heiss und catchy! </div></td></tr><tr class="review review3 loginsouthpaw rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4920843"></a><script>tDate = new Date(2019, 8, 8, 22, 19, 37);writeDateTime(tDate);</script><noscript>09.09.2019 00:19</noscript><br><b><a class="memberreview" href="/members_search.asp?login=southpaw">southpaw</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Kirins Kommentar trifft ins Schwarze.</div></td></tr><tr class="review review4 loginWerner rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4921823"></a><script>tDate = new Date(2019, 8, 11, 9, 36, 1);writeDateTime(tDate);</script><noscript>11.09.2019 11:36</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Werner">Werner</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Knappe vier Punkte liegen drin, auch wenn sie mit diesem Song meine Liebe nicht bekommen.</div></td></tr><tr class="review review3 loginKamala rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4921831"></a><script>tDate = new Date(2019, 8, 11, 9, 47, 37);writeDateTime(tDate);</script><noscript>11.09.2019 11:47</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Kamala">Kamala</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>&quot;s'isch emal en Maa gsii, de het en hohle Zaah ghaa&quot; ......a nei, das isch ja &#246;ppis anders. <br>Der Hype um Hecht nervt mich schon lange!</div></td></tr><tr class="review review3 loginda_hooliii rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4923143"></a><script>tDate = new Date(2019, 8, 14, 9, 2, 53);writeDateTime(tDate);</script><noscript>14.09.2019 11:02</noscript><br><b><a class="memberreview" href="/members_search.asp?login=da%5Fhooliii">da_hooliii</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Ich verstehe fast kein Wort was jetzt allerdings kein Ausschlusskriterium ist da ich ja auch kaum Spanisch verstehe und kein T&#252;rkisch und mir Musik in der Sprache trotzdem gef&#228;llt aber irgendwie &#252;berzeugt es mich auch nicht wirklich.</div></td></tr><tr class="review review5 loginbergclaus rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4928232"></a><script>tDate = new Date(2019, 8, 23, 10, 26, 4);writeDateTime(tDate);</script><noscript>23.09.2019 12:25</noscript><br><b><a class="memberreview" href="/members_search.asp?login=bergclaus">bergclaus</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:50px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">*****</div><script>r5++;</script>In meinen Augen macht Hecht soliden 08/15 Pop (3 Sterne). Nix besonderes also, aber das Video ist gelungen und sie schaffen es auf ihren Live-Auftritten ihre Fans zu begeistern. Man merkt ihnen an, mit welcher Freude sie spielen und stets das Beste geben. Au&#223;erdem strahlt ihr S&#228;nger immer, egal ob im Interview oder auf der B&#252;hne. Wer war schon mal bei Bob Dylan?<br>Daher aufgerundet auf 5.</div></td></tr><tr class="review review4 loginUebi rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4928238"></a><script>tDate = new Date(2019, 8, 23, 10, 38, 5);writeDateTime(tDate);</script><noscript>23.09.2019 12:37</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Uebi">Uebi</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Netter Song, der chartsm&#228;ssig in seiner ersten Woche allerdings deutlich &#252;ber seinen Verh&#228;ltnissen klassiert war. Ein passabler Mundartpopsong, der mir aber zu schlagerm&#228;ssig daherkommt. Knappe 4.</div></td></tr><tr class="review review5 logincube123 rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4929830"></a><script>tDate = new Date(2019, 8, 26, 14, 54, 28);writeDateTime(tDate);</script><noscript>26.09.2019 16:54</noscript><br><b><a class="memberreview" href="/members_search.asp?login=cube123">cube123</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:50px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">*****</div><script>r5++;</script>richtig guter song!</div></td></tr><tr class="review review3 loginMichael rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4936946"></a><script>tDate = new Date(2019, 9, 9, 8, 28, 22);writeDateTime(tDate);</script><noscript>09.10.2019 10:28</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Michael">Michael</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Nein danke, da bleib ich lieber solo (um die Frage des Titels zu beantworten).<br><br>Ansonsten wie gehabt, langweilige Band mit anspruchsloser Musik.</div></td></tr><tr class="review review6 loginjan256 rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4954015"></a><script>tDate = new Date(2019, 10, 9, 18, 45, 24);writeDateTime(tDate);</script><noscript>09.11.2019 19:45</noscript><br><b><a class="memberreview" href="/members_search.asp?login=jan256">jan256</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:60px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">******</div><script>r6++;</script>Gelungener Song der Band! Bleibt im Ohr! </div></td></tr><tr class="review review4 logingartenhaus rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4956941"></a><script>tDate = new Date(2019, 10, 14, 21, 8, 45);writeDateTime(tDate);</script><noscript>14.11.2019 22:09</noscript><br><b><a class="memberreview" href="/members_search.asp?login=gartenhaus">gartenhaus</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Ist okay, aber mehr nicht. 3+<br>Edit: ein wenig mehr schon 4<br><font color="#999999">Zuletzt editiert: 28.02.2020 15:16</font></div></td></tr><tr class="review review4 loginRewer rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4957864"></a><script>tDate = new Date(2019, 10, 16, 13, 46, 0);writeDateTime(tDate);</script><noscript>16.11.2019 14:46</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Rewer">Rewer</a></b><br>hitparade.ch</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>...gut...</div></td></tr><tr class="review review2 loginChuck_P rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4959079"></a><script>tDate = new Date(2019, 10, 18, 6, 36, 18);writeDateTime(tDate);</script><noscript>18.11.2019 07:36</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Chuck%5FP">Chuck_P</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:20px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">**</div><script>r2++;</script>diesmal &#252;berhaupt nicht mein fall.</div></td></tr><tr class="review review4 loginedmalosu rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4975247"></a><script>tDate = new Date(2019, 11, 13, 19, 19, 8);writeDateTime(tDate);</script><noscript>13.12.2019 20:19</noscript><br><b><a class="memberreview" href="/members_search.asp?login=edmalosu">edmalosu</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Hab zuerst eine 3 gegeben, jetzt finde ich eine 4 gerechtfertigt, immerhin finde ich dieses Lied um einiges besser als Charlotta und Adam + Eva<br><font color="#999999">Zuletzt editiert: 31.12.2019 16:13</font></div></td></tr><tr class="review review2 loginkhumphrey rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4985721"></a><script>tDate = new Date(2019, 11, 29, 22, 58, 40);writeDateTime(tDate);</script><noscript>29.12.2019 23:59</noscript><br><b><a class="memberreview" href="/members_search.asp?login=khumphrey">khumphrey</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:20px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">**</div><script>r2++;</script>bin eher n&#246;d ready</div></td></tr><tr class="review review4 loginRoefe rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4996660"></a><script>tDate = new Date(2020, 0, 16, 13, 42, 20);writeDateTime(tDate);</script><noscript>16.01.2020 14:42</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Roefe">Roefe</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Ganz &#228; sch&#246;n&#228; schwiiz&#228;r Song.</div></td></tr><tr class="review review2 loginsanremo rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="4996681"></a><script>tDate = new Date(2020, 0, 16, 14, 12, 52);writeDateTime(tDate);</script><noscript>16.01.2020 15:13</noscript><br><b><a class="memberreview" href="/members_search.asp?login=sanremo">sanremo</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:20px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">**</div><script>r2++;</script>2+</div></td></tr><tr class="review review1 loginHänsi rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5010883"></a><script>tDate = new Date(2020, 1, 7, 19, 59, 20);writeDateTime(tDate);</script><noscript>07.02.2020 20:59</noscript><br><b><a class="memberreview" href="/members_search.asp?login=H%E4nsi">Hänsi</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:10px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">*</div><script>r1++;</script>miserable anspruchslose SRF 3 Schweizer Musik,sehr sehr schlechte Stimme<br><font color="#999999">Zuletzt editiert: 07.02.2020 21:01</font></div></td></tr><tr class="review review2 loginMusicfreaky_93 rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5022625"></a><script>tDate = new Date(2020, 1, 23, 9, 18, 48);writeDateTime(tDate);</script><noscript>23.02.2020 10:19</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Musicfreaky%5F93">Musicfreaky_93</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:20px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">**</div><script>r2++;</script>Ich w&#228;r' jetzt mal ready f&#252;r gute Musik von Hecht.</div></td></tr><tr class="review review1 loginIvar-The-Boneless rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5095760"></a><script>tDate = new Date(2020, 3, 29, 8, 8, 5);writeDateTime(tDate);</script><noscript>29.04.2020 10:08</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Ivar+The+Boneless">Ivar The Boneless</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:10px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">*</div><script>r1++;</script>Eine der wohl schlechtesten Schweizer Bands aller Zeiten. Der &quot;S&#228;nger&quot; hat wenig bis gar kein Talent. </div></td></tr><tr class="review review3 loginremy rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5108456"></a><script>tDate = new Date(2020, 4, 11, 22, 32, 50);writeDateTime(tDate);</script><noscript>12.05.2020 00:33</noscript><br><b><a class="memberreview" href="/members_search.asp?login=remy">remy</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Gef&#228;llt mir auch nicht so gut</div></td></tr><tr class="review review4 loginTorta rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5170663"></a><script>tDate = new Date(2020, 6, 17, 3, 55, 22);writeDateTime(tDate);</script><noscript>17.07.2020 05:55</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Torta">Torta</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">****</div><script>r4++;</script>Die h&#228;nd beseri songs....<br><br><br></div></td></tr><tr class="review review3 loginOski-punkt-ch rev_de"><td class="textline" style="width:110px;background-color:#FFFFFF;"><div style="width:112px;overflow:hidden"><a name="5224623"></a><a name="lastreview"></a><script>tDate = new Date(2020, 8, 8, 8, 50, 38);writeDateTime(tDate);</script><noscript>08.09.2020 10:51</noscript><br><b><a class="memberreview" href="/members_search.asp?login=Oski%2Ech">Oski.ch</a></b><br>Member</div></td><td class="textline reviewcell" style="background-color:#FFFFFF;"><div class="reviewtext" style="background-color:#EEEEEE;border-radius:6px;padding:6px;"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:left;"></div><div style="color:#EEEEEE;width:1px;overflow:hidden;">***</div><script>r3++;</script>Kamala mal wieder mit dem exakt gleichen ersten Gedanken wie ich: &quot;Es isch emol &#228; Band gsi...&quot;</div></td></tr></table><div style=""></div><a href="/review.asp?interpret=Hecht&titel=Besch+ready+f%FCr+die+Liebi+vo+mer%3F&cat=s"><img src=/images/arrow_black.gif border=0>Kommentar hinzufügen und bewerten</a><br><img src=/images/arrow_black.gif border=0><a href="/reviews.asp?cat=s">Review Charts</a><br><br><script>rtotal = r1+r2+r3+r4+r5+r6;rohtml = '<table border=0 cellspacing=1 cellpadding=1>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review6\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:60px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r6*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r6+')</td></tr>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review5\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:50px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r5*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r5+')</td></tr>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review4\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:40px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r4*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r4+')</td></tr>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review3\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:30px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r3*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r3+')</td></tr>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review2\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:20px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r2*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r2+')</td></tr>';rohtml = rohtml + '<tr><td style="cursor:pointer;" onclick="$(\'.review\').hide();$(\'.review1\').show();$(\'#showallreviews\').show();"><div style="background:url(/images/6stars.gif);width:10px;height:10px;float:right;"></div></td><td style="width:200px;background-color:#EEEEEE;"><div style="width:'+r1*100/rtotal+'%;height:12px;background-color:#6CABDD;"></div></td><td style="text-align:right;font-size:10px;">('+r1+')</td></tr>';rohtml = rohtml + '</table>';rohtml = rohtml + '<a href="#" onclick="$(\'.review\').show();$(\'#showallreviews\').hide();$(\'#showfriendsreviews\').show();return false;" style="display:none;" id="showallreviews">Alle Reviews anzeigen</a>';
+hiddenreviews = 0;
+
+if (hiddenreviews>0) {
+	rohtml = rohtml + '<br><div id="trshowiddenreviews">' + hiddenreviews + ' Reviews aufgrund der Sprache nicht angezeigt. <a href="#" onclick="$(\'.review\').show();$(\'#trshowiddenreviews\').hide();return false;">Alle anzeigen</a></div>';
+}
+
+$('#roverview').html(rohtml);
+function showFriendsReviews() {
+  $.get( "/ajax_getfriends.asp", function( data ) {
+  	friends = data.split('\n');
+	for (i=0;i<friends.length;i++) {
+//console.log(friends[i].replace(/{/g,'-gauf-').replace(/}/g,'-gzu-').replace(/\./g,'-punkt-').replace(/"/g,'\'\'').replace(/ /g,'-').replace(/~/g,'-'));
+//if (i!=2 && i!=3) {
+		$('.login'+friends[i].replace(/{/g,'-gauf-').replace(/}/g,'-gzu-').replace(/\./g,'-punkt-').replace(/"/g,'\'\'').replace(/ /g,'-').replace(/~/g,'-')).show();		
+		//}
+	}
+  });
+}
+
+
+</script></div><script></script><div id="audiolayer" style="position:absolute;left:100px;top:100px;display:none;background-color:#FAFAFA"><audio controls controlsList="nodownload" src="https://tools2.hitparade.ch/tools/audio/0340000/0349688.mp3" id="aIpad"></audio></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer" class="notmobile">
+<div class="footersection"><div class="first"><a href="/music">MUSIK</a></div><div class="second"><a href="/charts" class="first">Schweizer Hitparade</a><br><a href="/awards.asp" class="first">Edelmetall</a><br><a href="/itunes_charts.asp" class="first">Weitere Charts</a><br><a href="/links_ch-artists.asp" class="first">Music Directory</a><br><a href="/reviews.asp" class="first">Reviews</a><br><a href="/events.asp" class="first">Events</a><br><a href="/interviews.asp" class="first">Interviews</a><br><a href="/esc.asp" class="first">Shows</a><br><a href="/fundgrube.asp" class="first">Fundgrube</a><br></div></div><div class="footersection"><div class="first"><a href="/cinema_overview.asp">FILM/TV</a></div><div class="second"><a href="/cinema_charts.asp?region=de" class="first">Kino-Hitparade</a><br><a href="/dvd.asp" class="first">DVD/Blu Ray Charts</a><br><a href="/reviews_movie.asp" class="first">Reviews</a><br><a href="/series.asp" class="first">Serien</a><br></div></div><div class="footersection"><div class="first"><a href="/books_overview.asp">BÜCHER</a></div><div class="second"><a href="/book_charts.asp?type=b" class="first">Belletristik</a><br><a href="/book_charts.asp?type=t" class="first">Taschenbücher</a><br><a href="/book_charts.asp?type=s" class="first">Sachbücher</a><br><a href="/book_charts.asp?type=e" class="first">E-Books</a><br><a href="/book_charts.asp?type=k" class="first">Kinder- und Jugendbücher</a><br></div></div><div class="footersection"><div class="first"><a href="/games.asp">GAMES</a></div><div class="second"><a href="/games_system.asp?system=Total" class="first">Total</a><br><a href="/games_system.asp?system=PC" class="first">PC</a><br><a href="/games_system.asp?system=Playstation+4" class="first">PS4</a><br><a href="/games_system.asp?system=Xbox+One" class="first">Xbox One</a><br><a href="/games_system.asp?system=Wii+U" class="first">Wii U</a><br><a href="/games_system.asp?system=Playstation+3" class="first">PS3</a><br><a href="/games_system.asp?system=Xbox+360" class="first">Xbox 360</a><br><a href="/games_system.asp?system=3DS" class="first">3DS</a><br><a href="/games_system.asp?system=Playstation+VITA" class="first">PS VITA</a><br><a href="/games_system.asp?system=Switch" class="first">Switch</a><br><a href="/games_system.asp?system=all" class="first">Alle Systeme</a><br><a href="/games_reviews.asp" class="first">Reviews</a><br></div></div><div class="footersection"><div class="first"><a href="/forum.asp">FORUM</a></div><div class="second"><a href="/forum.asp" class="first">Übersicht</a><br><a href="/forum.asp?todo=new" class="first">Neues Thema</a><br><a href="/forum.asp?todo=latest" class="first">Letzte Themen</a><br><a href="/shoutbox.asp" class="first">Shoutbox</a><br></div></div><div class="footersection"><div class="first"><b>RECHTLICHES</b></div><div class="second"><a href="/privacy.asp" class="first">Datenschutzbestimmungen</a><br><a href="/impressum.asp" class="first">Impressum</a><br><a href="/contact.asp" class="first">Kontakt</a><br></div></div>
+<div style="clear:both;padding-left:30px;padding-top:10px;">© 1995-2020 Hung Medien<script>//document.write('<img src="http://airplay.ch/country.asp">');</script><img src="https://tools2.hitparade.ch/hung/hlog.asp" width=1 height=1 style="visibility:hidden"></div>
+
+
+
+</div>
+
+</div>
+
+
+
+<div id="layCountries" class="topLayer" style="padding:0px;z-index:3;">
+	<a href="http://www.australian-charts.com">Australien</a>
+	<a href="http://www.ultratop.be">Belgien</a>
+	<a href="http://www.danishcharts.dk">Dänemark</a>
+	<a href="http://www.germancharts.de">Deutschland</a>
+	<a href="http://www.finnishcharts.com">Finnland</a>
+	<a href="http://www.lescharts.com">Frankreich</a>
+<!--	<a href="http://www.greekcharts.com">Griechenland</a>-->
+	<a href="http://www.italiancharts.com">Italien</a>
+<!--	<a href="http://www.mexicancharts.com">Mexiko</a>-->
+	<a href="http://www.charts.nz">Neuseeland</a>
+	<a href="http://www.dutchcharts.nl">Niederlande</a>
+	<a href="http://www.norwegiancharts.com">Norwegen</a>
+	<a href="http://www.austriancharts.at">Österreich</a>
+	<a href="http://www.portuguesecharts.com">Portugal</a>
+	<a href="http://www.swedishcharts.com">Schweden</a>
+	<a href="http://www.spanishcharts.com">Spanien</a>
+	<a href="http://www.lescharts.ch">Suisse Romande</a>
+</div>
+
+<div id="layLanguages" class="topLayer" style="padding:0px;z-index:3;">
+<a href="http://swisscharts.com/showitemurl.asp?cat=s&id=1901747">english</a>
+</div>
+
+<div id="layLogin" class="topLayer" style="z-index:3;">
+	<form action="/login.asp" method="post" name="formlogin">
+		<div style="margin-bottom:2px;color:#FFFFFF;font-size:10px;">LOGIN</div>
+		<input type="hidden" name="redirect" value="/showitemurl.asp?cat=s&amp;id=1901747">
+		<input type="text" name="login" style="width:100px;padding:1px 2px;color:#000000;border-radius:3px;border:0px;">
+		
+		<div style="margin-bottom:2px;color:#FFFFFF;margin-top:10px;font-size:10px;">PASSWORT</div>
+		<input type="password" name="password" style="width:100px;padding:1px 2px;color:#000000;border-radius:3px;border:0px;">
+		<input type="image" src="/images/white_right.gif">
+
+		<div style="margin-bottom:2px;color:#FFFFFF;margin-top:10px;font-size:10px;"><input type="checkbox" name="remember" value="yes" style="float:left;" id="autologin"><div style="float:left;margin-top:1px;"><label for="autologin">Auto Login</label></div></div>
+		
+		<div style="margin-bottom:2px;color:#FFFFFF;margin-top:10px;font-size:10px;clear:left;"><a href="/password_reset.asp">Passwort vergessen?</a></div>
+	</form>
+</div>
+
+<div id="laySearch" class="topLayer" style="padding:0px;width:106px;z-index:999999">
+	<ul>
+		<li><a id="sdd0" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Songs</a></li>
+		<li><a id="sdd1" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Alben</a></li>
+		<li><a id="sdd2" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Comp.</a></li>
+		<li><a id="sdd3" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Musik-DVD</a></li>
+		<li><a id="sdd4" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Interpret</a></li>
+		<li><a id="sdd5" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">EAN</a></li>
+		<li><a id="sdd6" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Edelmetall</a></li>
+		<li><a id="sdd7" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Komp./Prod.</a></li>
+		<li><a id="sdd8" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Filme</a></li>
+		<li><a id="sdd9" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Bücher</a></li>
+		<li><a id="sdd10" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Games</a></li>
+		<li><a id="sdd11" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Events</a></li>
+		<li><a id="sdd12" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Forum</a></li>
+		<li><a id="sdd13" href="#" onclick="$('#trSearch').val(this.innerHTML);$('#laySearch').hide();return false;">Fundgrube</a></li>
+		
+	</ul>
+</div>
+
+<script>
+	searchDD = 0
+	maxSearchDD = 14
+	
+function showSearchDD(e) {
+	var unicode=e.keyCode? e.keyCode : e.charCode
+	if (unicode==38 || unicode ==40) {
+		$('#laySearch').show();
+		searchDD = searchDD-39+unicode;
+		if (searchDD > maxSearchDD) searchDD=maxSearchDD;
+		if (searchDD < -1) searchDD=-1;
+		$('.hover').removeClass('hover');
+		$('#sdd'+ searchDD).addClass('hover');
+		return false;
+	}
+	if (unicode==13) {
+		if (searchDD>-1) {
+			$('#trSearch').val($('.hover').html());
+			$('#laySearch').hide();
+		}
+		return false;
+	}
+}
+
+</script>
+<!--<script src="http://hung.ch/hitparade1.asp" type="text/javascript" language="JavaScript"></script>-->
+
+<div style="position:absolute;left:1010px;top:44px;" id="skydiv" class="notmobile">
+
+
+<div id='div-gpt-ad-7379018-2'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-7379018-2'); });
+  </script>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3663954-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script>
+	function setCountry(sCountry) {
+	        var date = new Date();
+	        date.setTime(date.getTime() + (365*24*60*60*1000));
+		document.cookie = "country="+sCountry+"; expires=" + date.toUTCString();
+	}
+</script>
+<script src="https://tools2.hitparade.ch/hung/country.asp"></script>
+
+
+</div>
+
+
+
+<div id="cookiebanner" style="position:fixed;bottom:0px;left:0px;z-index:999999;padding:16px;background-color:#5C9BCD;color:white;font-size:14px;">
+<input type="submit" value="OK" style="float:right;font-size:20px;background-color:#5C9BCD;border: 2px solid white;color:white;cursor:pointer;padding:6px;margin-left:10px;" onclick="agreeCookies();">
+Unsere Website verwendet Cookies, um seinen Lesern das beste Webseiten-Erlebnis zu ermöglichen. Teilweise werden auch Cookies von Diensten Dritter gesetzt.
+Weitere Informationen findest Du in unserer <a href="/privacy.asp" style="color:white;">Datenschutzerklärung</a>.
+
+<script>
+	function agreeCookies() {
+		document.cookie = "hch_cookie=true; expires=Tue, 30 Dec 2025 23:59:00 UTC";
+		$('#cookiebanner').hide();
+	}
+</script>
+
+
+
+</body>
+</html>
+
+
+
+<script>
+function buyTrack(isrc,htrackid) {
+  document.getElementById('t'+htrackid).innerHTML="<img src='/images/wait2.gif'>";
+	var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+    xmlHttp.open('GET', '/7digital_buy.asp?isrc='+isrc, true);
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText+"//";
+						results = resultText.split("/");
+						if (results[2]=="") {
+							resultText="nicht verfügbar";
+						} else {
+							resultText = "<a href=\"#\" onclick=\"addBasket(" + results[0] + ", " + results[1] +", "+htrackid+");return false;\">CHF " + parseFloat(results[2]).toFixed(2) + ": kaufen</a>";
+						}
+            document.getElementById('t'+htrackid).innerHTML=resultText;
+        }
+    };
+    xmlHttp.send(null);
+}
+}
+
+
+
+
+function addBasket(release,trackid,htrackid) {
+document.getElementById('t'+htrackid).innerHTML="<img src='/images/wait2.gif'>";
+	var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+    xmlHttp.open('GET', '/7digital_addbasket.asp?release='+release+'&trackid='+trackid, true);
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText;
+						results = resultText.split("/");
+						resultText = "In <a href=\"/basket.asp\">Warenkorb</a> hinzugefügt";
+            document.getElementById('t'+htrackid).innerHTML=resultText;
+						document.getElementById('linkbasket').style.display='';
+        }
+    };
+    xmlHttp.send(null);
+}
+}
+
+
+function buyTrack2(releaseid) {
+  document.getElementById('r'+releaseid).innerHTML="<img src='/images/wait2.gif'>";
+	var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+    xmlHttp.open('GET', '/7digital_buyrelease.asp?releaseid='+releaseid, true);
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText;
+						if (resultText=="") {
+							resultText="nicht verfügbar";
+						} else {
+							resultText = "<a href=\"#\" onclick=\"addBasket2(" + releaseid +");return false;\">CHF " + parseFloat(resultText).toFixed(2) + ": kaufen</a>";
+						}
+            document.getElementById('r'+releaseid).innerHTML=resultText;
+        }
+    };
+    xmlHttp.send(null);
+}
+}
+
+
+function addBasket2(release) {
+document.getElementById('r'+release).innerHTML="<img src='/images/wait2.gif'>";
+	var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+    xmlHttp.open('GET', '/7digital_addbasket.asp?release='+release, true);
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText;
+						results = resultText.split("/");
+						resultText = "In <a href=\"/basket.asp\">Warenkorb</a> hinzugefügt";
+            document.getElementById('r'+release).innerHTML=resultText;
+        }
+    };
+    xmlHttp.send(null);
+}
+
+
+}
+
+
+function showDigitalReleases(sevendigitalreelases) {
+  document.getElementById('dreleases').innerHTML="<img src='/images/wait2.gif'>";
+	var xmlHttp = null;
+try {
+    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+    xmlHttp = new XMLHttpRequest ();
+} catch(e) {
+    try {
+        // MS Internet Explorer (ab v6)
+        xmlHttp  = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch(e) {
+        try {
+            // MS Internet Explorer (ab v5)
+            xmlHttp  = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xmlHttp  = null;
+        }
+    }
+}
+if (xmlHttp) {
+    xmlHttp.open('GET', '/7digital_getreleases.asp?releaseid='+sevendigitalreelases, true);
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+						resultText = xmlHttp.responseText;
+//						results = resultText.split("/");
+//						resultText = "test";
+            document.getElementById('dreleases').innerHTML=resultText;
+        }
+    };
+    xmlHttp.send(null);
+}
+}
+
+function callPlayer(frame_id, func, args) {
+    if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
+    var iframe = document.getElementById(frame_id);
+    if (iframe && iframe.tagName.toUpperCase() != 'IFRAME') {
+        iframe = iframe.getElementsByTagName('iframe')[0];
+    }
+
+    // When the player is not ready yet, add the event to a queue
+    // Each frame_id is associated with an own queue.
+    // Each queue has three possible states:
+    //  undefined = uninitialised / array = queue / 0 = ready
+    if (!callPlayer.queue) callPlayer.queue = {};
+    var queue = callPlayer.queue[frame_id],
+        domReady = document.readyState == 'complete';
+
+    if (domReady && !iframe) {
+        // DOM is ready and iframe does not exist. Log a message
+        window.console && console.log('callPlayer: Frame not found; id=' + frame_id);
+        if (queue) clearInterval(queue.poller);
+    } else if (func === 'listening') {
+        // Sending the "listener" message to the frame, to request status updates
+        if (iframe && iframe.contentWindow) {
+            func = '{"event":"listening","id":' + JSON.stringify(''+frame_id) + '}';
+            iframe.contentWindow.postMessage(func, '*');
+        }
+    } else if (!domReady ||
+               iframe && (!iframe.contentWindow || queue && !queue.ready) ||
+               (!queue || !queue.ready) && typeof func === 'function') {
+        if (!queue) queue = callPlayer.queue[frame_id] = [];
+        queue.push([func, args]);
+        if (!('poller' in queue)) {
+            // keep polling until the document and frame is ready
+            queue.poller = setInterval(function() {
+                callPlayer(frame_id, 'listening');
+            }, 250);
+            // Add a global "message" event listener, to catch status updates:
+            messageEvent(1, function runOnceReady(e) {
+                if (!iframe) {
+                    iframe = document.getElementById(frame_id);
+                    if (!iframe) return;
+                    if (iframe.tagName.toUpperCase() != 'IFRAME') {
+                        iframe = iframe.getElementsByTagName('iframe')[0];
+                        if (!iframe) return;
+                    }
+                }
+                if (e.source === iframe.contentWindow) {
+                    // Assume that the player is ready if we receive a
+                    // message from the iframe
+                    clearInterval(queue.poller);
+                    queue.ready = true;
+                    messageEvent(0, runOnceReady);
+                    // .. and release the queue:
+                    while (tmp = queue.shift()) {
+                        callPlayer(frame_id, tmp[0], tmp[1]);
+                    }
+                }
+            }, false);
+        }
+    } else if (iframe && iframe.contentWindow) {
+        // When a function is supplied, just call it (like "onYouTubePlayerReady")
+        if (func.call) return func();
+        // Frame exists, send message
+        iframe.contentWindow.postMessage(JSON.stringify({
+            "event": "command",
+            "func": func,
+            "args": args || [],
+            "id": frame_id
+        }), "*");
+    }
+    /* IE8 does not support addEventListener... */
+    function messageEvent(add, listener) {
+        var w3 = add ? window.addEventListener : window.removeEventListener;
+        w3 ?
+            w3('message', listener, !1)
+        :
+            (add ? window.attachEvent : window.detachEvent)('onmessage', listener);
+    }
+}
+
+
+if (window.location.hash=='#video') {
+    setTimeout(function(){ callPlayer("vplayer", "playVideo"); }, 1000);
+}
+if (window.location.hash.length==14) {
+	$('span[data-ean='+window.location.hash.substring(1)+']').css('background-color','yellow');
+}
+
+
+</script>
+
+
+
