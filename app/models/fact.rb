@@ -1,4 +1,6 @@
 class Fact < ApplicationRecord
+  include FactDecoratable
+
   belongs_to :station
   belongs_to :factable, polymorphic: true
 
@@ -11,12 +13,4 @@ class Fact < ApplicationRecord
     total_broadcasts: 'total_broadcasts',
     average_seconds_between_broadcasts: 'average_seconds_between_broadcasts'
   }
-
-  def decorated_value
-    decorate.value
-  end
-
-  def decorate
-    @decorate ||= FactDecorator.new(self)
-  end
 end

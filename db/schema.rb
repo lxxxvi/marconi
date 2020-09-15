@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_150100) do
+ActiveRecord::Schema.define(version: 2020_09_15_124722) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
   enable_extension "tablefunc"
 
@@ -54,6 +55,18 @@ ActiveRecord::Schema.define(version: 2020_09_10_150100) do
     t.string "latest_broadcasted_at"
     t.string "total_broadcasts"
     t.index ["song_id"], name: "index_song_id_on_cached_song_facts"
+  end
+
+  create_table "charts_facts", force: :cascade do |t|
+    t.string "country", null: false
+    t.string "factable_type", null: false
+    t.bigint "factable_id", null: false
+    t.string "key", null: false
+    t.string "value", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["country", "factable_type", "factable_id", "key"], name: "indx_country_factable_key", unique: true
+    t.index ["factable_type", "factable_id"], name: "index_charts_facts_on_factable_type_and_factable_id"
   end
 
   create_table "cleaned_broadcasts", id: false, force: :cascade do |t|
@@ -101,6 +114,7 @@ ActiveRecord::Schema.define(version: 2020_09_10_150100) do
     t.string "ch_charts_scraper_url"
     t.string "ch_charts_scraper_status", null: false
     t.datetime "ch_charts_scraper_status_updated_at", null: false
+    t.string "year"
     t.index ["artist_id", "title"], name: "index_songs_on_artist_id_and_title", unique: true
     t.index ["artist_id"], name: "index_songs_on_artist_id"
   end

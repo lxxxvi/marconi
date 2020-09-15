@@ -8,6 +8,7 @@ class Song < ApplicationRecord
   has_many :broadcasts, dependent: :destroy
   has_many :external_keys, as: :externally_identifyable, dependent: :destroy
   has_many :facts, as: :factable, dependent: :destroy
+  has_many :charts_facts, as: :factable, dependent: :destroy
 
   enum ch_charts_scraper_status: {
     new: 'new',
@@ -20,6 +21,14 @@ class Song < ApplicationRecord
   after_initialize :initialize_ch_charts_scraper_status
 
   scope :ch_charts_scraper_enabled, -> { where(ch_charts_scraper_enabled: true) }
+
+  def charts_fact(country, key)
+    charts_facts.of_country(country).of_key(key).first_or_initialize
+  end
+
+  def decorate
+    @decorate ||= SongDecorator.new(self)
+  end
 
   private
 

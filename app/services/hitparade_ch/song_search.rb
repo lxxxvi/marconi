@@ -1,15 +1,17 @@
 require 'open-uri'
 
-class Google::SearchResultScraper
-  SEARCH_URL = 'https://www.google.ch/search'.freeze
+class HitparadeCh::SongSearch
+  URL = 'https://hitparade.ch'.freeze
+  SEARCH_URL = 'https://hitparade.ch/search.asp'.freeze
 
-  def initialize(search_term)
-    @search_term = search_term
+  def initialize(artist_name, song_title)
+    @artist_name = artist_name
+    @song_title = song_title
   end
 
   def search_result_links
     search_result_items.map do |item|
-      exctract_href(item['href'])
+      "#{URL}#{item['href']}"
     end
   end
 
@@ -19,16 +21,12 @@ class Google::SearchResultScraper
 
   private
 
-  def exctract_href(google_href)
-    Rack::Utils.parse_query(google_href.sub(%r{^/url\?}, ''))['q']
-  end
-
   def search_result
     @search_result ||= Nokogiri::HTML(perform_search)
   end
 
   def search_result_items
-    @search_result_items ||= search_result.css('a[href^="/url?"]')
+    @search_result_items ||= search_result.css('td a[href^="/song/"]')
   end
 
   def perform_search
@@ -38,7 +36,7 @@ class Google::SearchResultScraper
     raise e
   end
 
-  def to_google_q(value)
+  def to_query_param(value)
     value.split(' ').map { CGI.escape(_1) }.join('+')
   end
 
@@ -48,13 +46,13 @@ class Google::SearchResultScraper
 
   def params
     {
-      hl: 'de-CH',
-      source: 'hp',
-      biw: '',
-      bih: '',
-      q: to_google_q(@search_term),
-      btnG: 'Google+Suche',
-      gbv: '1'
+      cat: 's',
+      from: '',
+      to: '',
+      artist: to_query_param(@artist_name),
+      artist_search: 'starts',
+      title: to_query_param(@song_title),
+      title_search: 'starts'
     }
   end
 end
