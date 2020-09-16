@@ -13,3 +13,8 @@ beatles_help:
   <<: *DEFAULTS
   title: "Help!"
   artist: beatles
+
+the_roots_the_seed:
+  <<: *DEFAULTS
+  title: "The Seed (2.0)"
+  artist: the_roots

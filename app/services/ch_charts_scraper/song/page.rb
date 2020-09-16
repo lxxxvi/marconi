@@ -1,28 +1,24 @@
 require 'open-uri'
 
-class ChChartsScraper::SongPage
+class ChChartsScraper::Song::Page
   def initialize(url)
     @url = url
   end
 
   def artist_with_song
-    @artist_with_song ||= read_artist_with_song
+    read_artist_with_song
   end
 
   def song_year
-    @song_year ||= read_song_year
+    @song_year ||= read_year
   end
 
-  def latest_chart_appearance_on
-    @latest_chart_appearance_on ||= read_latest_chart_appearance_on
-  end
-
-  def chart_peak_position
-    @chart_peak_position ||= read_chart_peak_position
-  end
-
-  def weeks_in_charts
-    @weeks_in_charts ||= read_weeks_in_charts
+  def chart_facts
+    @chart_facts ||= {
+      latest_chart_appearance_on: read_latest_chart_appearance_on,
+      chart_peak_position: read_chart_peak_position,
+      weeks_in_charts: read_weeks_in_charts
+    }
   end
 
   private
@@ -31,7 +27,7 @@ class ChChartsScraper::SongPage
     nhtml.css('h1').first.text
   end
 
-  def read_song_year
+  def read_year
     value_from_table(:song, 'Jahr:')&.to_i
   end
 
@@ -62,7 +58,11 @@ class ChChartsScraper::SongPage
   end
 
   def fetch_url
-    URI.open(@url).read
+    URI.open(sanitized_url).read
+  end
+
+  def sanitized_url
+    @url.gsub('[', '%5B').gsub(']', '%5D')
   end
 
   def tables
@@ -81,6 +81,8 @@ class ChChartsScraper::SongPage
     return if tables[table_key].blank?
 
     cell_key_element = find_element_by_text(tables[table_key], 'tr > td', cell_key)
+    return if cell_key_element.nil?
+
     cell_key_element.next_sibling.text
   end
 
