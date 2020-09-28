@@ -59,10 +59,13 @@ class ChChartsScraper::Song::Page
 
   def fetch_url
     URI.open(sanitized_url).read
+  rescue StandardError => e
+    Rails.logger.error("Called URL: #{sanitized_url}")
+    raise e
   end
 
   def sanitized_url
-    @url.gsub('[', '%5B').gsub(']', '%5D')
+    SanitizedUrl.encode(@url)
   end
 
   def tables
