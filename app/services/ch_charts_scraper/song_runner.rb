@@ -48,5 +48,7 @@ class ChChartsScraper::SongRunner
   def new_songs
     Song.ch_charts_scraper_enabled
         .ch_charts_scraper_status_new
+        .order(created_at: :asc)
+  end
   end
 end
