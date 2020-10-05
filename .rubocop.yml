@@ -14,6 +14,9 @@ AllCops:
 Rails:
   Enabled: true
 
+Layout/BeginEndAlignment:
+  Enabled: true
+
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 
@@ -24,6 +27,9 @@ Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
 Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: true
+
+Lint/ConstantDefinitionInBlock:
   Enabled: true
 
 Lint/DeprecatedOpenSSLConstant:
@@ -45,6 +51,9 @@ Lint/EmptyFile:
   Enabled: true
 
 Lint/FloatComparison:
+  Enabled: true
+
+Lint/IdentityComparison:
   Enabled: true
 
 Lint/MissingSuper:
@@ -75,6 +84,9 @@ Lint/UnreachableLoop:
   Enabled: true
 
 Lint/UselessMethodDefinition:
+  Enabled: true
+
+Lint/UselessTimes:
   Enabled: true
 
 Metrics/BlockLength:
