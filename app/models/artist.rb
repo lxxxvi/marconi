@@ -1,5 +1,6 @@
 class Artist < ApplicationRecord
   include CachedFacts
+  include Ilike
 
   validates :name, presence: true
   validates :name, uniqueness: true
