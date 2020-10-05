@@ -5,21 +5,22 @@ class ChChartsScraper::SongRunner
 
   def call!
     Rails.logger.info("Going to scrape until #{@stop_scraping_at.inspect}")
-    ordered_srf3songs.each do |song|
-      break if @stop_scraping_at.past?
-
-      do_the_work(song)
-      catch_a_breath
-    end
+    do_the_work(new_songs, 'New Songs')
 
     Rails.logger.info('Goodbye.')
   end
 
   private
 
-  def do_the_work(song)
-    Rails.logger.info("Scraping #{green(song.decorate.artist_with_song)}")
-    ChChartsScraper::Song.new(song).call!
+  def do_the_work(songs_scope, scope_name)
+    Rails.logger.info("Song scope: #{pink(scope_name)}")
+    songs_scope.each do |song|
+      break if @stop_scraping_at.past?
+
+      Rails.logger.info("Scraping #{green(song.decorate.artist_with_song)}")
+      ChChartsScraper::Song.new(song).call!
+      catch_a_breath
+    end
   end
 
   def catch_a_breath
@@ -36,17 +37,16 @@ class ChChartsScraper::SongRunner
     "\e[90m#{text}\e[0m"
   end
 
+  def pink(text)
+    "\e[95m#{text}\e[0m"
+  end
+
   def random_sleep_time
     (([1, 2, 3].sample * [2, 3, 4].sample) / 2.0)
   end
 
-  # simplify this as soon as the majority of songs URL have been found
-  def ordered_srf3songs
+  def new_songs
     Song.ch_charts_scraper_enabled
-        .where(ch_charts_scraper_status: %i[outdated new])
-        .left_outer_joins(:facts)
-        .joins(:artist).includes(:artist)
-        .where(facts: { station: Station.find_by!(name: 'SRF3'), key: :total_broadcasts })
-        .order(Arel.sql('CAST(facts.value AS INT) DESC'))
+        .ch_charts_scraper_status_new
   end
 end
