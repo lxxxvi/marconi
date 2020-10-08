@@ -50,5 +50,4 @@ class ChChartsScraper::SongRunner
         .ch_charts_scraper_status_new
         .order(created_at: :asc)
   end
-  end
 end
