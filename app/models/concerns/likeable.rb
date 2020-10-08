@@ -1,4 +1,4 @@
-module Ilike
+module Likeable
   extend ActiveSupport::Concern
 
   included do
