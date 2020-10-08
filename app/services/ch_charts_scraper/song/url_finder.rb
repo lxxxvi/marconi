@@ -1,6 +1,7 @@
 class ChChartsScraper::Song::UrlFinder
-  def initialize(song)
-    @song = song
+  def initialize(artist_name, song_title)
+    @artist_name = artist_name
+    @song_title = song_title
   end
 
   def url
@@ -18,7 +19,7 @@ class ChChartsScraper::Song::UrlFinder
   end
 
   def search_service
-    HitparadeCh::SongSearch.new(@song.artist.name, @song.title)
+    HitparadeCh::SongSearch.new(@artist_name, @song_title)
   end
 
   # temporarily unused:
