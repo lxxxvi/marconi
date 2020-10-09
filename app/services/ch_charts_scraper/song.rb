@@ -14,12 +14,16 @@ class ChChartsScraper::Song
     mark_as_incorrect_url!
   end
 
+  def song_ch_charts_scraper_status
+    @song.ch_charts_scraper_status
+  end
+
   private
 
   def find_song_url!
     return if @song.ch_charts_scraper_url.present?
 
-    url = ChChartsScraper::Song::UrlFinder.new(@song).url
+    url = ChChartsScraper::Song::UrlFinder.new(artist_name_search_term, song_title_search_term).url
 
     @song.ch_charts_scraper_url = url
     @song.ch_charts_scraper_status = url.present? ? 'outdated' : 'url_not_found'
@@ -60,5 +64,13 @@ class ChChartsScraper::Song
     @song.ch_charts_scraper_status = 'incorrect_url'
     @song.ch_charts_scraper_status_updated_at = Time.zone.now
     @song.save!
+  end
+
+  def artist_name_search_term
+    @song.artist.name.split(%r{( */ *|( +FT\. +| +FEAT\.? +| +FEATURING? +))}).first
+  end
+
+  def song_title_search_term
+    @song.title
   end
 end

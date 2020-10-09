@@ -1,6 +1,7 @@
 require 'open-uri'
 
 class HitparadeCh::SongSearch
+  ENCODING = 'ISO-8859-1'.freeze
   URL = 'https://hitparade.ch'.freeze
   SEARCH_URL = 'https://hitparade.ch/search.asp'.freeze
 
@@ -30,14 +31,16 @@ class HitparadeCh::SongSearch
   end
 
   def perform_search
-    URI.open(query_url).read
+    Rails.logger.info("   => #{query_url}")
+    URI.open(query_url, encoding: ENCODING).read
   rescue OpenURI::HTTPError => e
     Rails.logger.error("Called URL: #{query_url}")
     raise e
   end
 
   def to_query_param(value)
-    value.split(' ').map { CGI.escape(_1) }.join('+')
+    cleaned_value = value.gsub(/[^\p{Alnum} ]/, ' ')
+    CGI.escape(cleaned_value.encode(ENCODING))
   end
 
   def to_query_params(hash)

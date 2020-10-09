@@ -36,7 +36,7 @@ class ChChartsScraper::SongTest < ActiveSupport::TestCase
 
   def stub_the_roots_the_seed_hitparade_ch_song_search
     stub_with_fixture(
-      url: 'https://hitparade.ch/search.asp?artist=The%20Roots&artist_search=starts&cat=s&from=&title=The%20Seed%20(2.0)&title_search=starts&to=',
+      url: 'https://hitparade.ch/search.asp?artist=The%20Roots&artist_search=starts&cat=s&from=&title=The%20Seed%20%202%200%20&title_search=starts&to=',
       fixture: 'hitparade_ch/search_the_roots_the_seed.html'
     )
   end
