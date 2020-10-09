@@ -40,7 +40,7 @@ class HitparadeCh::SongSearch
 
   def to_query_param(value)
     cleaned_value = value.gsub(/[^\p{Alnum} ]/, ' ')
-    CGI.escape(cleaned_value.encode(ENCODING))
+    CGI.escape(cleaned_value.encode(ENCODING, invalid: :replace, undef: :replace, replace: ' '))
   end
 
   def to_query_params(hash)
