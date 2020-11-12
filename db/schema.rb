@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_124722) do
+ActiveRecord::Schema.define(version: 2020_11_12_120517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -103,6 +103,17 @@ ActiveRecord::Schema.define(version: 2020_09_15_124722) do
     t.index ["factable_type", "factable_id"], name: "index_facts_on_factable_type_and_factable_id"
     t.index ["station_id", "factable_type", "factable_id", "key", "epoch_year", "epoch_week"], name: "indx_station_factable_key_epoch", unique: true
     t.index ["station_id"], name: "index_facts_on_station_id"
+  end
+
+  create_table "predictions", force: :cascade do |t|
+    t.date "reference_date", null: false
+    t.bigint "song_id", null: false
+    t.decimal "score", null: false
+    t.string "result"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reference_date", "song_id"], name: "index_predictions_on_reference_date_and_song_id", unique: true
+    t.index ["song_id"], name: "index_predictions_on_song_id"
   end
 
   create_table "songs", force: :cascade do |t|
