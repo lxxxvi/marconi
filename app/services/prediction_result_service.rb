@@ -28,6 +28,7 @@ class PredictionResultService
            , p.updated_at
            , CASE
                WHEN b.song_id IS NOT NULL THEN 'PLAYED'
+               ELSE 'NOT PLAYED'
              END AS result
         FROM predictions p
         LEFT OUTER JOIN distinct_songs_broadcasts b ON b.date = p.reference_date::TIMESTAMP
