@@ -1,0 +1,11 @@
+prediction_2020_11_11_beatles_yesterday:
+  reference_date: 2020-11-11
+  song: beatles_yesterday
+  score: 0.88
+  result: 'PLAYED'
+
+prediction_2020_11_11_beatles_help:
+  reference_date: 2020-11-11
+  song: beatles_help
+  score: 0.87
+  result: 'NOT PLAYED'
