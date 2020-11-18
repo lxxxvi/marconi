@@ -7,6 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bugsnag'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
+gem 'rack-cors'
 gem 'rails'
 gem 'webmock'
 
