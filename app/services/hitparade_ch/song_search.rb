@@ -32,7 +32,7 @@ class HitparadeCh::SongSearch
 
   def perform_search
     Rails.logger.info("   => #{query_url}")
-    URI.open(query_url, encoding: ENCODING).read
+    URI.parse(query_url).open(encoding: ENCODING).read
   rescue OpenURI::HTTPError => e
     Rails.logger.error("Called URL: #{query_url}")
     raise e

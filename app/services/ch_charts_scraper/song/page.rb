@@ -35,7 +35,7 @@ class ChChartsScraper::Song::Page
     raw_value = value_from_table(:charts, 'Zuletzt:')
     return if raw_value.nil?
 
-    date_part = raw_value.split(' ').first
+    date_part = raw_value.split.first
     Date.strptime(date_part, '%d.%m.%Y')
   end
 
@@ -58,7 +58,7 @@ class ChChartsScraper::Song::Page
   end
 
   def fetch_url
-    URI.open(sanitized_url).read
+    URI.parse(sanitized_url).open.read
   rescue StandardError => e
     Rails.logger.error("Called URL: #{sanitized_url}")
     raise e
