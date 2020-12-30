@@ -32,14 +32,14 @@ class Google::SearchResultScraper
   end
 
   def perform_search
-    URI.open(query_url).read
+    URI.parse(query_url).open.read
   rescue OpenURI::HTTPError => e
     Rails.logger.error("Called URL: #{query_url}")
     raise e
   end
 
   def to_google_q(value)
-    value.split(' ').map { CGI.escape(_1) }.join('+')
+    value.split.map { CGI.escape(_1) }.join('+')
   end
 
   def to_query_params(hash)

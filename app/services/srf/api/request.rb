@@ -11,7 +11,7 @@ class Srf::Api::Request
   end
 
   def call
-    Srf::Api::Response.new(URI.open(url).read)
+    Srf::Api::Response.new(URI.parse(url).open.read)
   end
 
   def url

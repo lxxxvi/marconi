@@ -1,5 +1,5 @@
 class SanitizedUrl
-  URIREGEX = %r{^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$}.freeze
+  URIREGEX = %r{^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$}
 
   def initialize(uri)
     @uri = uri
